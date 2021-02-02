@@ -1,0 +1,11 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "stack"
+
+[params]
+  [params.defaultImage]
+    [params.defaultImage.opengraph]
+      enabled = false
+      local = false
+

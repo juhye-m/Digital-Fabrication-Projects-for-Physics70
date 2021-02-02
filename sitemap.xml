@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2021-01-31T17:41:13-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/</loc>
+    <lastmod>2021-01-31T17:41:13-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/proposal/</loc>
+    <lastmod>2021-01-31T17:41:13-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/week10/</loc>
+    <lastmod>2021-01-31T17:41:13-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/week11/</loc>
+    <lastmod>2021-01-31T17:41:13-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/week12/</loc>
+    <lastmod>2021-01-31T17:41:13-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/week2/</loc>
+    <lastmod>2021-01-31T17:41:13-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/week3/</loc>
+    <lastmod>2021-01-31T17:41:13-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/week4/</loc>
+    <lastmod>2021-01-31T17:41:13-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/week5/</loc>
+    <lastmod>2021-01-31T17:41:13-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/week6/</loc>
+    <lastmod>2021-01-31T17:41:13-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/week7/</loc>
+    <lastmod>2021-01-31T17:41:13-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/week8/</loc>
+    <lastmod>2021-01-31T17:41:13-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/week9/</loc>
+    <lastmod>2021-01-31T17:41:13-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+  </url>
+  
+</urlset>

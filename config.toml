@@ -1,6 +1,6 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "JuHye Mun"
 theme = "stack"
 
 [params]
@@ -9,3 +9,23 @@ theme = "stack"
       enabled = false
       local = false
 
+  [params.sidebar]
+    emoji = "👻"
+    subtitle = "Blog for PS70"
+    [params.sidebar.avatar]
+      local = true
+      src = "img/avatar.jpg"
+
+[menu]
+    [[menu.main]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
+        weight = -100
+        pre = "home"
+    [[menu.main]]
+        identifier = "about-cn"
+        name = "About"
+        url = "/about/"
+        weight = -90
+        pre = "user"

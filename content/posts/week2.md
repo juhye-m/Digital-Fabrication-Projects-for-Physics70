@@ -1,6 +1,5 @@
 ---
 title: "Week 2"
 date: 2021-02-05T15:42:05-08:00
-draft: true
 ---
 

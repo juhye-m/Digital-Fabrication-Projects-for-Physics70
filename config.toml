@@ -10,7 +10,7 @@ theme = "stack"
       local = false
 
   [params.sidebar]
-    emoji = "👻"
+    emoji = "👾"
     subtitle = "Blog for PS70"
     [params.sidebar.avatar]
       local = true
@@ -20,12 +20,12 @@ theme = "stack"
     [[menu.main]]
         identifier = "home"
         name = "Home"
-        url = "/"
+        url = ""
         weight = -100
         pre = "home"
     [[menu.main]]
         identifier = "about-cn"
         name = "About"
-        url = "/about/"
+        url = "about"
         weight = -90
         pre = "user"

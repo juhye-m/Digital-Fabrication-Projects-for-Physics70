@@ -7,7 +7,7 @@ theme = "stack"
   [params.defaultImage]
     [params.defaultImage.opengraph]
       enabled = false
-      local = false
+      local = true
 
   [params.sidebar]
     emoji = "👾"

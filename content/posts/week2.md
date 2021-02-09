@@ -32,7 +32,7 @@ TADA! Here is my finished product:
 ![Finished Product](done.png) 
 
 
-## 3D Modeling Real-life
+## 2D Design
 
 This next exercise was to model components found in our physical kit for PS70. I chose to first recreate this breadboard:
 

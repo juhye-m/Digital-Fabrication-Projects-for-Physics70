@@ -39,6 +39,9 @@ Originally, I wanted to make a fan, but it was both lopsided and not too pretty!
 {{< youtube id="_8P_PymbkUg" title="Sculpture Finished" >}}
 
 It's a bit cursed. Here's a meme:
-![Meme](meme.jpg)
+![Meme](meme2.JPEG)
+
+Make your own!
+![Meme](meme.JPEG)
 
 <!-- https://youtu.be/dcrF8g68u-k -->

@@ -8,8 +8,7 @@ date: 2021-02-05T15:42:05-08:00
 For this assignment, I collaborated with Hugh and Amy to create a cardboard press-fit kit for lampshades.
 I got this idea from a beautiful wooden lamp that I had seen on the internet:
 
-![Photo from google images](/woodlamp.png)
-<img src = "/woodlamp.png">
+![Photo from google images](woodlamp.png)
 
 I realized that none of us were artists, and so we decided to create geometric patterns that would create a "starlight" effect over a lightbulb, like these:
 
@@ -48,6 +47,6 @@ First, I created another sketch of my breadboard. The most difficult part of thi
 I added construction lines and a construction square box around the top and bottom circles in order to keep my lines and shapes clean and aligned.
 However, the issue was that because of slight imperfections in my measuring of the real breadboard, there was an extra millimeter of spave at the bottom of the grids that was unintentional.
 
-![Sketch of breadboard](sketchbb.jpg)
+![Sketch of breadboard](sketchbb.png)
 
 I must go and redo these measurements, or "predict" the measurements with math so that the breadboard is symmetrical. The next step then would be to re-extrude the components and add the sides pieces together as well!

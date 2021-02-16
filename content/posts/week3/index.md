@@ -23,7 +23,7 @@ I didn't have many materials around the house, but I realized that the plastic p
 Then, I taped the entire project onto a piece of scrap cardboard, with the breadboard on top, the circuit and a USB power source in the middle, and the motors/wheels at the bottom.
 
 ![Structure](structure.jpg)
-![Side view](side.jpg)
+![Side view](sside.jpg)
 
 
  

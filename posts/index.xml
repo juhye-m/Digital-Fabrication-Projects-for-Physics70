@@ -6,7 +6,18 @@
     <description>Recent content in Posts on JuHye Mun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Feb 2021 21:48:03 -0800</lastBuildDate><atom:link href="https://juhye-m.github.io/ps70/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Feb 2021 21:48:03 -0800</lastBuildDate><atom:link href="https://juhye-m.github.io/ps70/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Week 4</title>
+      <link>https://juhye-m.github.io/ps70/posts/week4/</link>
+      <pubDate>Mon, 22 Feb 2021 21:48:03 -0800</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week4/</guid>
+      <description>Week 4: Microcontroller Programming This week, I created a simple button-controlled music player!
+Materials I used the M0 Metro Circuit from Adafruit, a piezo speaker, a button, and the breadboard from the PS 70 kit to start.
+I first used the button circuit from class as inspiration. I attached a button and a resistor from ground to one of its legs. Then I connected this leg to digital input 8 so that I can program the button&amp;rsquo;s functionality.</description>
+    </item>
+    
     <item>
       <title>Week3</title>
       <link>https://juhye-m.github.io/ps70/posts/week3/</link>

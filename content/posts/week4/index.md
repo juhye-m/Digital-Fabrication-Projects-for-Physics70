@@ -20,8 +20,7 @@ Then, I hooked up the piezo speaker! I connected the - leg to ground and the + l
 ![Circuit](circuit.jpg)
 
 #### Code
-I got the initial code for the music here [Adafruit Guide] (
-https://learn.adafruit.com/experimenters-guide-for-metro/circ06-code)
+I got the initial code for the music from this [Adafruit Guide!](https://learn.adafruit.com/experimenters-guide-for-metro/circ06-code)
 
 
 

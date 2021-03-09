@@ -62,7 +62,7 @@ Here, I used components from the PS70 kit, and imported them into my watch file 
         <guid>https://juhye-m.github.io/ps70/posts/week-6/</guid>
         <description>Week 6: Sensors This week, I used an accelerometer to measure the XYZ location and the acceration of my breadboard!
 Materials I used the M0 Metro Circuit from Adafruit, and an Adafruit lis3dh accelerometer from the ps70 kit.
-I followed along this Adafruit tutorial at first in order to gain a better understanding of how this sensor works.
+I followed along this Adafruit Guide! at first in order to gain a better understanding of how this sensor works.
 How It Works The Adafruit LIS3DH triple-Axis Accelerometer Breakout has three axis sensing.</description>
         </item>
         

@@ -31,6 +31,7 @@ I got the initial code from the Adafruit acceleration example! I had to download
 I wasn't actually sure how to calibrate this accelerometer. I played around with the accelerometer to move it back and forth and different speeds. As I move it back and forth, I suspected that the faster I move it, the more acceleration there would be, especially during my "turning points" when I switch from moving it one direction to another.
 
 <!-- ![Chart](moving.MOV) -->
+{{< youtube id="Gh7k_WlOMco" title="Moving the accelerometer" >}}
 
 However, I don't think this was the best way of testing, as I didn't get much of a takeaway result. It might be that the m/s^2 is too large of a unit.
 

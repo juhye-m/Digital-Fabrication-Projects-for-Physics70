@@ -11,7 +11,7 @@ This week, I used an accelerometer to measure the XYZ location and the acceratio
 #### Materials
 I used the M0 Metro Circuit from Adafruit, and an Adafruit lis3dh accelerometer from the ps70 kit.
 
-I followed along this Adafruit tutorial at first in order to gain a better understanding of how this sensor works.
+I followed along this [Adafruit Guide!](https://learn.adafruit.com/adafruit-lis3dh-triple-axis-accelerometer-breakout/arduino) at first in order to gain a better understanding of how this sensor works.
 
 #### How It Works
 

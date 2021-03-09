@@ -30,7 +30,7 @@ I got the initial code from the Adafruit acceleration example! I had to download
 #### Calibrating
 I wasn't actually sure how to calibrate this accelerometer. I played around with the accelerometer to move it back and forth and different speeds. As I move it back and forth, I suspected that the faster I move it, the more acceleration there would be, especially during my "turning points" when I switch from moving it one direction to another.
 
-![Chart](moving.MOV)
+<!-- ![Chart](moving.MOV) -->
 
 However, I don't think this was the best way of testing, as I didn't get much of a takeaway result. It might be that the m/s^2 is too large of a unit.
 
@@ -38,7 +38,7 @@ Another issue I wondered about is why the acceleration was still around 9.8 m/s^
 
 
 Here's the original data:
-![Serial Monitor](serialmon.MOV)
+<!-- ![Serial Monitor](serialmon.MOV) -->
 
 ![Chart](chart.png)
 

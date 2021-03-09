@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on JuHye Mun</title>
+    <link>https://juhye-m.github.io/ps70/posts/</link>
+    <description>Recent content in Posts on JuHye Mun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Feb 2021 21:48:03 -0800</lastBuildDate><atom:link href="https://juhye-m.github.io/ps70/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Week 4</title>
+      <link>https://juhye-m.github.io/ps70/posts/week4/</link>
+      <pubDate>Mon, 22 Feb 2021 21:48:03 -0800</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week4/</guid>
+      <description>Week 4: Microcontroller Programming This week, I created a simple button-controlled music player!
+Materials I used the M0 Metro Circuit from Adafruit, a piezo speaker, a button, and the breadboard from the PS 70 kit to start.
+I first used the button circuit from class as inspiration. I attached a button and a resistor from ground to one of its legs. Then I connected this leg to digital input 8 so that I can program the button&amp;rsquo;s functionality.</description>
+    </item>
+    
+    <item>
+      <title>Week3</title>
+      <link>https://juhye-m.github.io/ps70/posts/week3/</link>
+      <pubDate>Fri, 12 Feb 2021 21:48:03 -0800</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week3/</guid>
+      <description>Week 3: Kinetic Sculpture This week, I created a Valentine&amp;rsquo;s day themed rotating bird as a kinetic sculpture. This was definitely a journey &amp;ndash; it evolved into something much more fun that I anticipated!
+Materials I used the M0 Metro Circuit from Adafruit, a potentiometer, a moter, and the breadboard from the PS 70 kit to start. Circuit inspired by class:  Circuit 
+Attached the motor to the lego wheels and 3D printed structures from the hardware packet.</description>
+    </item>
+    
+    <item>
+      <title>Week 2</title>
+      <link>https://juhye-m.github.io/ps70/posts/week-2/</link>
+      <pubDate>Fri, 05 Feb 2021 15:42:05 -0800</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week-2/</guid>
+      <description>Press Fit Construction Kit For this assignment, I collaborated with Hugh and Amy to create a cardboard press-fit kit for lampshades. I got this idea from a beautiful wooden lamp that I had seen on the internet:
+ Photo from google images 
+I realized that none of us were artists, and so we decided to create geometric patterns that would create a &amp;ldquo;starlight&amp;rdquo; effect over a lightbulb, like these:</description>
+    </item>
+    
+    <item>
+      <title>PS 70 Project Proposal</title>
+      <link>https://juhye-m.github.io/ps70/posts/proposal/</link>
+      <pubDate>Sun, 31 Jan 2021 17:41:13 -0800</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/proposal/</guid>
+      <description>For my final project, I aim to build a midi controller where a person can change instrument sounds just by holding their hand up or horizontally or down. Because of the &amp;ldquo;hands off&amp;rdquo; concept, the musician/producer doesn&amp;rsquo;t have to rely on a bulky piece of hardware. The project could incorporate different sensors such as light, movement, and visual sensors (such as a camera). This product would simulate a two-dimensional plane, where each axis represents some customizable parameter to an instrument.</description>
+    </item>
+    
+    <item>
+      <title>Week 5</title>
+      <link>https://juhye-m.github.io/ps70/posts/week-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week-5/</guid>
+      <description>Week 5: 3D This week, I started an motion sensored alarm watch model.
+Fusion 360 This model is inspired by the Apple Watch wrist band that ibudman! created.
+Here, I used components from the PS70 kit, and imported them into my watch file through the insert function in Fusion 360. I used the Arduino microcontroller, piezo buzzer, battery 5V, and the accelerometer gyroscope. The microcontroller would hold the program that would play the buzzer while the gyroscope was not detecting movement.</description>
+    </item>
+    
+    <item>
+      <title>Week 6</title>
+      <link>https://juhye-m.github.io/ps70/posts/week-6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week-6/</guid>
+      <description>Week 6: Sensors This week, I used an accelerometer to measure the XYZ location and the acceration of my breadboard!
+Materials I used the M0 Metro Circuit from Adafruit, and an Adafruit lis3dh accelerometer from the ps70 kit.
+I followed along this Adafruit tutorial at first in order to gain a better understanding of how this sensor works.
+How It Works The Adafruit LIS3DH triple-Axis Accelerometer Breakout has three axis sensing.</description>
+    </item>
+    
+  </channel>
+</rss>

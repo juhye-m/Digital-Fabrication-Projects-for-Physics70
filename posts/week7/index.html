@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Week 7 I had many ideas this week The first one was to create a mic-sensor controlled led output that lit up when the sound threshold past a certain point. The other was to use the feather controller to build upon my project from a couple weeks ago with the piezo speaker and music! Finally, for section, I created this awesome webcam.
+Mic sensor For this project, I knew that I needed to wire up the mic and the LED with the m0 microcontroller such that the microphone was the input and the LED light was the output.'><title>Week 7</title>
+
+<link rel='canonical' href='https://juhye-m.github.io/ps70/posts/week7/'>
+
+<link rel="stylesheet" href="/ps70/scss/style.min.css"><meta property='og:title' content='Week 7'>
+<meta property='og:description' content='Week 7 I had many ideas this week The first one was to create a mic-sensor controlled led output that lit up when the sound threshold past a certain point. The other was to use the feather controller to build upon my project from a couple weeks ago with the piezo speaker and music! Finally, for section, I created this awesome webcam.
+Mic sensor For this project, I knew that I needed to wire up the mic and the LED with the m0 microcontroller such that the microphone was the input and the LED light was the output.'>
+<meta property='og:url' content='https://juhye-m.github.io/ps70/posts/week7/'>
+<meta property='og:site_name' content='JuHye Mun'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' />
+<meta name="twitter:title" content="Week 7">
+<meta name="twitter:description" content="Week 7 I had many ideas this week The first one was to create a mic-sensor controlled led output that lit up when the sound threshold past a certain point. The other was to use the feather controller to build upon my project from a couple weeks ago with the piezo speaker and music! Finally, for section, I created this awesome webcam.
+Mic sensor For this project, I knew that I needed to wire up the mic and the LED with the m0 microcontroller such that the microphone was the input and the LED light was the output.">
+    </head>
+    <body class="article-page keep-sidebar">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column compact ">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/ps70/img/avatar_hue776a334b902d7828bf5c7a8aa11ccb3_243528_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">👾</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://juhye-m.github.io/ps70/">JuHye Mun</a></h1>
+        <h2 class="site-description">Blog for PS70</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/ps70/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/ps70/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/ps70/posts/week7/">Week 7</a>
+    </h2>
+
+    </div>
+</header>
+
+    <section class="article-content">
+    <h2 id="week-7">Week 7</h2>
+<p>I had many ideas this week The first one was to create a mic-sensor controlled led output that lit up when the sound threshold past a certain point.
+The other was to use the feather controller to build upon my project from a couple weeks ago with the piezo speaker and music!
+Finally, for section, I created this awesome webcam.</p>
+<h2 id="mic-sensor">Mic sensor</h2>
+<p>For this project, I knew that I needed to wire up the mic and the LED with the m0 microcontroller such that the microphone was the input and the LED light was the output. My idea was to make the LED light up of the sound was past a certain DB threshold. I thought this concept could be applied to more useful projects later on, since one thing I struggle with is hearing problems (my ears are often too sensitive and they &ldquo;twitch&rdquo; a lot when I can&rsquo;t hear). It would be cool to have a device that tells me how loud the environment I&rsquo;m in is! Later, I wanted to have the screen tcp output that could actually display the specific sound level measurements. But first, I wanted to test out and learn how to make the mic work with a simple LED hookup.</p>
+<p>Here&rsquo;s what the product looked like:
+<figure style="flex-grow: 133; flex-basis: 320px">
+		<a href="/ps70/posts/week7/mic.jpg" data-size="2016x1512"><img src="/ps70/posts/week7/mic.jpg"
+				srcset="/ps70/posts/week7/mic_hubf1f699b457a2c1a789dcdd408dbbf7b_582021_480x0_resize_q75_box.jpg 480w, /ps70/posts/week7/mic_hubf1f699b457a2c1a789dcdd408dbbf7b_582021_1024x0_resize_q75_box.jpg 1024w"
+				width="2016"
+				height="1512"
+				loading="lazy"
+				alt="mic">
+		</a>
+		
+		<figcaption>mic</figcaption>
+		
+	</figure></p>
+<p>And here was the code:
+<figure style="flex-grow: 103; flex-basis: 247px">
+		<a href="/ps70/posts/week7/3ps.png" data-size="984x954"><img src="/ps70/posts/week7/3ps.png"
+				srcset="/ps70/posts/week7/3ps_hubf70cbe31036439442a744b565d1bb3f_155281_480x0_resize_box_2.png 480w, /ps70/posts/week7/3ps_hubf70cbe31036439442a744b565d1bb3f_155281_1024x0_resize_box_2.png 1024w"
+				width="984"
+				height="954"
+				loading="lazy"
+				alt="3ps">
+		</a>
+		
+		<figcaption>3ps</figcaption>
+		
+	</figure></p>
+<p>Unfortunately, the code was not working and I kept getting the error of a timeout. I have a couple hypothesis for this, and one is that the mic is not always listening. I might need to put this in a loop so that the mic is always sensing. I tried to play around with this code, but couldn&rsquo;t figure out how exactly to make this work. So, I decided to move on to another idea I had, which was to combine what we learned in class about a simple wifi server and try to integrate it into my earlier project with a piezo speaker that played music!</p>
+<h2 id="wifi-speaker">Wifi Speaker</h2>
+<p>For this, I had to remember to change my board in the Arduino tools.</p>
+<p>I connected the SCK 5 pin to the positive side of the spiezo and tthen ground to the negetive leg. I predicted that this would be similar to the LED controlled output from class.</p>
+<p>Here is my circuit:
+<figure style="flex-grow: 133; flex-basis: 320px">
+		<a href="/ps70/posts/week7/feather.jpg" data-size="2016x1512"><img src="/ps70/posts/week7/feather.jpg"
+				srcset="/ps70/posts/week7/feather_hud60c13e45f498cf8affd8ebb8b351f4c_513626_480x0_resize_q75_box.jpg 480w, /ps70/posts/week7/feather_hud60c13e45f498cf8affd8ebb8b351f4c_513626_1024x0_resize_q75_box.jpg 1024w"
+				width="2016"
+				height="1512"
+				loading="lazy"
+				alt="Feather">
+		</a>
+		
+		<figcaption>Feather</figcaption>
+		
+	</figure></p>
+<p>I knew that the hardest part of this would be to integrate the wifi code with the music ones that I had earlier. It was kind of difficult to understand everything that was going on with the wifi code, and I didn&rsquo;t realize it until I was ready to try it out! Here is what my code looks like so far (there are some comments about LED that aren&rsquo;t relevant here):</p>
+<p><figure style="flex-grow: 70; flex-basis: 168px">
+		<a href="/ps70/posts/week7/1ps.png" data-size="738x1054"><img src="/ps70/posts/week7/1ps.png"
+				srcset="/ps70/posts/week7/1ps_hu5cf2969b0d2fbf9f5c2259f175343e06_142565_480x0_resize_box_2.png 480w, /ps70/posts/week7/1ps_hu5cf2969b0d2fbf9f5c2259f175343e06_142565_1024x0_resize_box_2.png 1024w"
+				width="738"
+				height="1054"
+				loading="lazy"
+				alt="1ps">
+		</a>
+		
+		<figcaption>1ps</figcaption>
+		
+	</figure>
+<figure style="flex-grow: 72; flex-basis: 173px">
+		<a href="/ps70/posts/week7/2ps.png" data-size="798x1102"><img src="/ps70/posts/week7/2ps.png"
+				srcset="/ps70/posts/week7/2ps_hue6dbe6c82e4ee4d606b869e67bb69bda_202791_480x0_resize_box_2.png 480w, /ps70/posts/week7/2ps_hue6dbe6c82e4ee4d606b869e67bb69bda_202791_1024x0_resize_box_2.png 1024w"
+				width="798"
+				height="1102"
+				loading="lazy"
+				alt="2ps">
+		</a>
+		
+		<figcaption>2ps</figcaption>
+		
+	</figure></p>
+<p>This is some debugging that I want to continue to do, as there were some syntax errors that weren&rsquo;t being nice.</p>
+<h2 id="web-cam">Web cam!</h2>
+<p>Finally, this is an assignment that I did during lab, after many minutes of trying to figure out what was happening with Victoria, Amy, and Erik. This is a video of how it works, and I thought it was pretty cool!</p>
+<!-- raw HTML omitted -->
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe loading="lazy" src="https://www.youtube.com/embed/PaHwoCIrXOQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+    
+</article>
+
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 JuHye Mun
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.0.1">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ps70/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -65,6 +65,15 @@ Materials I used the M0 Metro Circuit from Adafruit, and an Adafruit lis3dh acce
 I followed along this Adafruit Guide! at first in order to gain a better understanding of how this sensor works.
 How It Works The Adafruit LIS3DH triple-Axis Accelerometer Breakout has three axis sensing.</description>
         </item>
+        <item>
+        <title>Week 7</title>
+        <link>https://juhye-m.github.io/ps70/posts/week7/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://juhye-m.github.io/ps70/posts/week7/</guid>
+        <description>Week 7 I had many ideas this week The first one was to create a mic-sensor controlled led output that lit up when the sound threshold past a certain point. The other was to use the feather controller to build upon my project from a couple weeks ago with the piezo speaker and music! Finally, for section, I created this awesome webcam.
+Mic sensor For this project, I knew that I needed to wire up the mic and the LED with the m0 microcontroller such that the microphone was the input and the LED light was the output.</description>
+        </item>
         
     </channel>
 </rss>

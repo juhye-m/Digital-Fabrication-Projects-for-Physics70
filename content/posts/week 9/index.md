@@ -88,12 +88,14 @@ BLE Scanner App instructions
 ## Custom Bluetooth app
 
 React native is a cross-platform mobile application framework using JavaScript that was created by Facebook. It is widely used in app development. You can install react native component libraries, which helps you integrate different functions into your app. I decided to try this out, since I wanted to start creating an app that could work on both Android and iOS.
-In order to incorporate BLE functionality, I installed the react-native-ble-plx library from [Polidea's GitHub Repository](https://github.com/Polidea/react-native-ble-plx). I followed along with 
+In order to incorporate BLE functionality, I installed the react-native-ble-plx library from [Polidea's GitHub Repository](https://github.com/Polidea/react-native-ble-plx). I followed along with the set up, which took a really long time because I kept getting many errors when trying to update my PodFile, which is a file that describes the dependencies of XCode targets. (All lingo I was unfamiliar with).
 
 
 ![React App code](AppCode.png)
 
+Ultimately, I was not able to implement anything substantial, but at least I got the initial setup running! Xcode also kept crashing, unfortunately :( 
+
 ## Radio communication: Huzzah and ESP32 Cam
 
-For this project, I used 
+For this project, I demonstrated radio serial communication between my Huzzah Board and my ESP32 Cam. One major issue I kept having was accidently getting my two boards mixed up. So, I renamed the files to directly say "this one is the one to be uploaded to the Huzzah" and vice versa, and only had one board connected at a time so I don't get ports confused! Here's a demonstration of successful radio communication in the serial monitor! For next time, I want to integrate other output devices.
 {{< youtube id="CIntOBjuvO4" title="Radio Communication" >}}

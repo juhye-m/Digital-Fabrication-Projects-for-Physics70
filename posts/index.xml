@@ -6,7 +6,18 @@
     <description>Recent content in Posts on JuHye Mun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Feb 2021 21:48:03 -0800</lastBuildDate><atom:link href="https://juhye-m.github.io/ps70/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Mar 2021 21:48:03 -0800</lastBuildDate><atom:link href="https://juhye-m.github.io/ps70/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Week 9</title>
+      <link>https://juhye-m.github.io/ps70/posts/week-9/</link>
+      <pubDate>Sat, 27 Mar 2021 21:48:03 -0800</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week-9/</guid>
+      <description>Week 9 BLE: LED on/off control This week, I programmed my Huzzah board to respond to a BLE connection. I downloaded the BLE Scanner app by Bluepixel Technologies onto my iPhone.
+Here&amp;rsquo;s what the product looked like:   Here&amp;rsquo;s my code as a code snippet. (Code snippets in markdown can be embedded with 3 backward ticks):
+/* Based on Neil Kolban example for IDF: https://github.com/nkolban/esp32-snippets/blob/master/cpp_utils/tests/BLE%20Tests/SampleWrite.cpp Ported to Arduino ESP32 by Evandro Copercini */ #include &amp;lt;BLEDevice.</description>
+    </item>
+    
     <item>
       <title>Week 4</title>
       <link>https://juhye-m.github.io/ps70/posts/week4/</link>

@@ -223,7 +223,7 @@ Here&amp;rsquo;s what the product looked like:   Here&amp;rsquo;s my code as a c
 <h2 id="custom-bluetooth-app">Custom Bluetooth app</h2>
 <p>React native is a cross-platform mobile application framework using JavaScript that was created by Facebook. It is widely used in app development. You can install react native component libraries, which helps you integrate different functions into your app. I decided to try this out, since I wanted to start creating an app that could work on both Android and iOS.
 In order to incorporate BLE functionality, I installed the react-native-ble-plx library from <a class="link" href="https://github.com/Polidea/react-native-ble-plx"  target="_blank" rel="noopener"
-    >Polidea&rsquo;s GitHub Repository</a>. I followed along with</p>
+    >Polidea&rsquo;s GitHub Repository</a>. I followed along with the set up, which took a really long time because I kept getting many errors when trying to update my PodFile, which is a file that describes the dependencies of XCode targets. (All lingo I was unfamiliar with).</p>
 <p><figure style="flex-grow: 141; flex-basis: 339px">
 		<a href="/ps70/posts/week-9/AppCode.png" data-size="982x694"><img src="/ps70/posts/week-9/AppCode.png"
 				srcset="/ps70/posts/week-9/AppCode_hu5e9d2bdaf914d6a68f5510105ca0ccad_119986_480x0_resize_box_2.png 480w, /ps70/posts/week-9/AppCode_hu5e9d2bdaf914d6a68f5510105ca0ccad_119986_1024x0_resize_box_2.png 1024w"
@@ -236,8 +236,9 @@ In order to incorporate BLE functionality, I installed the react-native-ble-plx 
 		<figcaption>React App code</figcaption>
 		
 	</figure></p>
+<p>Ultimately, I was not able to implement anything substantial, but at least I got the initial setup running! Xcode also kept crashing, unfortunately :(</p>
 <h2 id="radio-communication-huzzah-and-esp32-cam">Radio communication: Huzzah and ESP32 Cam</h2>
-<p>For this project, I used
+<p>For this project, I demonstrated radio serial communication between my Huzzah Board and my ESP32 Cam. One major issue I kept having was accidently getting my two boards mixed up. So, I renamed the files to directly say &ldquo;this one is the one to be uploaded to the Huzzah&rdquo; and vice versa, and only had one board connected at a time so I don&rsquo;t get ports confused! Here&rsquo;s a demonstration of successful radio communication in the serial monitor! For next time, I want to integrate other output devices.
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe loading="lazy" src="https://www.youtube.com/embed/CIntOBjuvO4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>

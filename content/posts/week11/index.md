@@ -14,6 +14,10 @@ This week, I decided to tackle working with the ESP32 Cam and colortrack with Op
 
 Then, I wanted to customize this program so that it outputs a music note when the program detects that the object is in a certain location. There is a lot to build open this, such as changing pitch as the colored object moves across the screen. This could be a cool instrument achieved with just a glove! MIDI could be integrated as well.
 
+I did more research for what I could explore with the ESP32 webcam, and came across this [Python program that plays music when it detects your face](https://pgaleone.eu/tensorflow/opencv/playerctl/2020/03/26/facectrl-control-media-player-face/).
+
+Though not ESP32-specific, in general applications, I also found a [research paper[](/research.pdf) on hand gesture recognition, which also logs differences in detection based on camera used, depth of field, and backgrounds. This would be a great place for people to learn more if they are interested in object tracking.
+
 ## Capacitive Touch Midi Controller
 
 I wrote custom code to measure capacitive touch and turn that data into midi data to use in a DAW! 

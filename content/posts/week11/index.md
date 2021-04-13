@@ -16,7 +16,7 @@ Then, I wanted to customize this program so that it outputs a music note when th
 
 I did more research for what I could explore with the ESP32 webcam, and came across this [Python program that plays music when it detects your face](https://pgaleone.eu/tensorflow/opencv/playerctl/2020/03/26/facectrl-control-media-player-face/).
 
-Though not ESP32-specific, in general applications, I also found a [research paper[](/research.pdf) on hand gesture recognition, which also logs differences in detection based on camera used, depth of field, and backgrounds. This would be a great place for people to learn more if they are interested in object tracking.
+Though not ESP32-specific, in general applications, I also found a [research paper](/research.pdf) on hand gesture recognition, which also logs differences in detection based on camera used, depth of field, and backgrounds. This would be a great place for people to learn more if they are interested in object tracking.
 
 ## Capacitive Touch Midi Controller
 

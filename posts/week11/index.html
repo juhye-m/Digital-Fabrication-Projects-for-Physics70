@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Week 11 Color Tracking Web cam! Made with OpenCV.js.
+  Capacitive Touch Midi Controller I wrote custom code to measure capacitive touch and turn that data into midi data to use in a DAW!
+#include &amp;lt;CapacitiveSensor.h&amp;gt; CapacitiveSensor Sensor = CapacitiveSensor(7,5); // 7 is charge pin. 5 is sense pin. byte noteON = 144; //note on command  long currentState = 0; long lastState = 0; void setup(){ Serial.begin(115200); //initialize Serial connection } void loop(){ long sensorValue = Sensor.'><title>Week 11</title>
+
+<link rel='canonical' href='https://juhye-m.github.io/ps70/posts/week11/'>
+
+<link rel="stylesheet" href="/ps70/scss/style.min.css"><meta property='og:title' content='Week 11'>
+<meta property='og:description' content='Week 11 Color Tracking Web cam! Made with OpenCV.js.
+  Capacitive Touch Midi Controller I wrote custom code to measure capacitive touch and turn that data into midi data to use in a DAW!
+#include &amp;lt;CapacitiveSensor.h&amp;gt; CapacitiveSensor Sensor = CapacitiveSensor(7,5); // 7 is charge pin. 5 is sense pin. byte noteON = 144; //note on command  long currentState = 0; long lastState = 0; void setup(){ Serial.begin(115200); //initialize Serial connection } void loop(){ long sensorValue = Sensor.'>
+<meta property='og:url' content='https://juhye-m.github.io/ps70/posts/week11/'>
+<meta property='og:site_name' content='JuHye Mun'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' />
+<meta name="twitter:title" content="Week 11">
+<meta name="twitter:description" content="Week 11 Color Tracking Web cam! Made with OpenCV.js.
+  Capacitive Touch Midi Controller I wrote custom code to measure capacitive touch and turn that data into midi data to use in a DAW!
+#include &amp;lt;CapacitiveSensor.h&amp;gt; CapacitiveSensor Sensor = CapacitiveSensor(7,5); // 7 is charge pin. 5 is sense pin. byte noteON = 144; //note on command  long currentState = 0; long lastState = 0; void setup(){ Serial.begin(115200); //initialize Serial connection } void loop(){ long sensorValue = Sensor.">
+    </head>
+    <body class="article-page keep-sidebar">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column compact ">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/ps70/img/avatar_hue776a334b902d7828bf5c7a8aa11ccb3_243528_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">👾</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://juhye-m.github.io/ps70/">JuHye Mun</a></h1>
+        <h2 class="site-description">Blog for PS70</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/ps70/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/ps70/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/ps70/posts/week11/">Week 11</a>
+    </h2>
+
+    </div>
+</header>
+
+    <section class="article-content">
+    <h2 id="week-11">Week 11</h2>
+<h2 id="color-tracking-web-cam">Color Tracking Web cam!</h2>
+<p>Made with OpenCV.js.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe loading="lazy" src="https://www.youtube.com/embed/g9m6Zp3z3As" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="capacitive-touch-midi-controller">Capacitive Touch Midi Controller</h2>
+<p>I wrote custom code to measure capacitive touch and turn that data into midi data to use in a DAW!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;CapacitiveSensor.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+CapacitiveSensor Sensor <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">5</span>);  <span style="color:#75715e">// 7 is charge pin.  5 is sense pin.
+</span><span style="color:#75715e"></span>byte noteON <span style="color:#f92672">=</span> <span style="color:#ae81ff">144</span>; <span style="color:#75715e">//note on command
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">long</span> currentState <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>(){
+  Serial.begin(<span style="color:#ae81ff">115200</span>); <span style="color:#75715e">//initialize Serial connection
+</span><span style="color:#75715e"></span>}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>(){
+  <span style="color:#66d9ef">long</span> sensorValue <span style="color:#f92672">=</span> Sensor.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+
+  currentState <span style="color:#f92672">=</span> sensorValue;
+  <span style="color:#66d9ef">if</span> (currentState <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">40000</span>  <span style="color:#f92672">&amp;&amp;</span> lastState <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1000</span>){
+    MIDImessage(noteON, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">127</span>); <span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">200</span>); <span style="color:#75715e">// Debounce
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">40000</span>  <span style="color:#f92672">&amp;&amp;</span> lastState <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1000</span>){
+    MIDImessage(noteON, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">0</span>); <span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">20</span>);
+  }
+  lastState <span style="color:#f92672">=</span> currentState;
+
+<span style="color:#75715e">//  Serial.println(sensorValue); // Debugging
+</span><span style="color:#75715e"></span> 
+}
+<span style="color:#75715e">//send MIDI message
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">MIDImessage</span>(byte command, byte data1, byte data2) {
+  Serial.write(command);
+  Serial.write(data1);
+  Serial.write(data2);
+}
+</code></pre></div><p>The serial midi program I ran is the same code as last week&rsquo;s.</p>
+<p>My circuit and baseline code works. I can test the output values by printing the sensor values to the serial monitor. I ran the serial to midi converter, and hooked it up to my Macbook audio input bus. I then opened my DAW, and it almost works!</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe loading="lazy" src="https://www.youtube.com/embed/wJ-ZqfLPNT8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="miscellaneous">Miscellaneous</h2>
+<p>I wanted to make my terminal more visible when recording a demo video and was planning on switching to &ldquo;dark mode&rdquo;. Turns out, you can customize the mac terminals even more! Here&rsquo;s my custom terminal inspired by an artist I like.</p>
+<p><figure style="flex-grow: 112; flex-basis: 270px">
+		<a href="/ps70/posts/week11/rose.jpg" data-size="3024x2681"><img src="/ps70/posts/week11/rose.jpg"
+				srcset="/ps70/posts/week11/rose_hu1df62645cc6a48d4c9a3876818980744_1169774_480x0_resize_q75_box.jpg 480w, /ps70/posts/week11/rose_hu1df62645cc6a48d4c9a3876818980744_1169774_1024x0_resize_q75_box.jpg 1024w"
+				width="3024"
+				height="2681"
+				loading="lazy"
+				alt="Rosé terminal">
+		</a>
+		
+		<figcaption>Rosé terminal</figcaption>
+		
+	</figure></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+    
+</article>
+
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 JuHye Mun
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.0.1">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ps70/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

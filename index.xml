@@ -63,6 +63,16 @@ I realized that none of us were artists, and so we decided to create geometric p
         <description>Week 10 Final project This week, I worked a lot on my final project. My final project idea is to create a midi keyboard that can be controlled from different software that allows you to create music, so Digital Audio Workstations. First, in terms of the physical aspect of my product, I needed to think about how I want to implement input. There were different ideas I had, including buttons and copper tape as well as a potentiometer.</description>
         </item>
         <item>
+        <title>Week 11</title>
+        <link>https://juhye-m.github.io/ps70/posts/week11/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://juhye-m.github.io/ps70/posts/week11/</guid>
+        <description>Week 11 Color Tracking Web cam! Made with OpenCV.js.
+  Capacitive Touch Midi Controller I wrote custom code to measure capacitive touch and turn that data into midi data to use in a DAW!
+#include &amp;lt;CapacitiveSensor.h&amp;gt; CapacitiveSensor Sensor = CapacitiveSensor(7,5); // 7 is charge pin. 5 is sense pin. byte noteON = 144; //note on command  long currentState = 0; long lastState = 0; void setup(){ Serial.begin(115200); //initialize Serial connection } void loop(){ long sensorValue = Sensor.</description>
+        </item>
+        <item>
         <title>Week 5</title>
         <link>https://juhye-m.github.io/ps70/posts/week-5/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -68,9 +68,7 @@ I realized that none of us were artists, and so we decided to create geometric p
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://juhye-m.github.io/ps70/posts/week11/</guid>
-        <description>Week 11 Color Tracking Web cam! Made with OpenCV.js.
-  Capacitive Touch Midi Controller I wrote custom code to measure capacitive touch and turn that data into midi data to use in a DAW!
-#include &amp;lt;CapacitiveSensor.h&amp;gt; CapacitiveSensor Sensor = CapacitiveSensor(7,5); // 7 is charge pin. 5 is sense pin. byte noteON = 144; //note on command  long currentState = 0; long lastState = 0; void setup(){ Serial.begin(115200); //initialize Serial connection } void loop(){ long sensorValue = Sensor.</description>
+        <description>Week 11 Color Tracking Web cam! This week, I decided to tackle working with the ESP32 Cam and colortrack with OpenCV.js. Important notes included engaging the reset button onboard while connecting, and disconnecting the ground and GPIO pins after uploading the code. Once I had the program and board set up and working, it was time to manipulate the OpenCV application! It was difficult at first to set a good mask to track my blue-colored object.</description>
         </item>
         <item>
         <title>Week 5</title>

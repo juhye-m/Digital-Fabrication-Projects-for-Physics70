@@ -12,6 +12,8 @@ This week, I decided to tackle working with the ESP32 Cam and colortrack with Op
 
 {{< youtube id="g9m6Zp3z3As" title="ESP32 Cam Color Tracking" >}}
 
+Then, I wanted to customize this program so that it outputs a music note when the program detects that the object is in a certain location. There is a lot to build open this, such as changing pitch as the colored object moves across the screen. This could be a cool instrument achieved with just a glove! MIDI could be integrated as well.
+
 ## Capacitive Touch Midi Controller
 
 I wrote custom code to measure capacitive touch and turn that data into midi data to use in a DAW! 

@@ -67,7 +67,7 @@ void MIDImessage(byte command, byte data1, byte data2) {
   Serial.write(data2);
 }
 ```
-The serial midi program I ran is the same code as last week's. You can find it [here, in week 10](https://juhye-m.github.io/ps70/posts/week-10/).
+The serial midi program I ran is the same code as last week's, as well as the IAC buses for input/output. You can find it [here, in week 10](https://juhye-m.github.io/ps70/posts/week-10/).
 
 My circuit and baseline code works. I can test the output values by printing the sensor values to the serial monitor. I ran the serial to midi converter, and hooked it up to my Macbook audio input bus. I then opened my DAW, and it almost works!
 
@@ -75,8 +75,16 @@ My circuit and baseline code works. I can test the output values by printing the
 
 However, for some reason, this midi data doesn't "save", nor does it produce sound. However, it is clearly detecting the midi notes. I have yet to debug this.
 
+I also did further research on the overall technology I am implementing. IAC stands for Inter-Application Communitation. The IAC Driver is Apple's default MIDI device that you can use to communicate to Applications (such as Logic Pro X) that I use here. I must set up IAC drivers -- it doesn't set itself up automatically.
+
+MIDI refers to a protocol for communication, digital interface, and electrical connectors  -- formally called Musical Instrument Digital Interface. It was developed in the 80s. The reason why MIDI devices do not produce audio on their own is because MIDI does not provide actual audio signals. It is simply data and information that does not include audio signals.
+
+For my code, I used the MIDImessage Arduino function. It takes as parameters (noteON, pitch, velocity). These are decimal values, which are converted into binary. More info [here](https://www.instructables.com/What-is-MIDI/)!
+
 ## Miscellaneous
 
 I wanted to make my terminal more visible when recording a demo video and was planning on switching to "dark mode". Turns out, you can customize the mac terminals even more! Here's my custom terminal inspired by an artist I like.
 
 ![Rosé terminal](rose.jpg)
+
+You can also customize your terminal by going to preferences->profile, then selecting custom parameters!

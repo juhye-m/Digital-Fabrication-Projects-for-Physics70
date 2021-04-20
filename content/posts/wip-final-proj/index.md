@@ -31,6 +31,9 @@ I did more research for what I could explore with the ESP32 webcam, and came acr
     - [ ] https://forum.juce.com/t/hardware-control-via-serial-usb/39346/5 
     - [ ] vcv rack https://vcvrack.com/
 
+#### Velostat (flex sensor)
+Deprecates quickly.
+
 ## Initial Research
 
 I also did further research on the overall technology I am implementing. IAC stands for Inter-Application Communitation. The IAC Driver is Apple's default MIDI device that you can use to communicate to Applications (such as Logic Pro X) that I use here. I must set up IAC drivers -- it doesn't set itself up automatically.

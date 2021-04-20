@@ -6,7 +6,26 @@
     <description>Recent content in Posts on JuHye Mun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Mar 2021 21:48:03 -0800</lastBuildDate><atom:link href="https://juhye-m.github.io/ps70/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Apr 2021 10:35:42 -0700</lastBuildDate><atom:link href="https://juhye-m.github.io/ps70/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Week 12</title>
+      <link>https://juhye-m.github.io/ps70/posts/week12/</link>
+      <pubDate>Mon, 19 Apr 2021 10:35:42 -0700</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week12/</guid>
+      <description>Week 11 Molding and Casting This week was molding and casting week, so I looked around my room for something interesting to make a mold out of. After feeling like I didn&amp;rsquo;t have something cool (I left my trinkets at home), I finally decided to make a mold of my perfume bottle cap. It looks like this!
+I liked how the bottom sat flat on the ground, and how the figure resembles a human.</description>
+    </item>
+    
+    <item>
+      <title>WIP Final Project</title>
+      <link>https://juhye-m.github.io/ps70/posts/wip-final-proj/</link>
+      <pubDate>Tue, 13 Apr 2021 12:44:06 -0700</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/wip-final-proj/</guid>
+      <description>Compilation of Working Documentation for Final Project Proposal Brainstorm/Other Ideas &amp;ldquo;Hands Off&amp;rdquo; Color Tracking 3D MIDI controller with ESP32 Cam For my final project, I aim to build a midi controller where a person can change instrument sounds just by holding their hand up or horizontally or down. Because of the &amp;ldquo;hands off&amp;rdquo; concept, the musician/producer doesn&amp;rsquo;t have to rely on a bulky piece of hardware. The project could incorporate different sensors such as light, movement, and visual sensors (such as a camera).</description>
+    </item>
+    
     <item>
       <title>Week 9</title>
       <link>https://juhye-m.github.io/ps70/posts/week-9/</link>

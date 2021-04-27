@@ -371,22 +371,22 @@ Here is now the functional capacitive touch (using copper tape) midi control!
 ## Bill Of Materials
 
 #### Physical components
-- (1 Adafruit METRO M0 Express)[https://www.adafruit.com/product/3505]
-- (1 Micro-USB cable)[https://www.adafruit.com/product/592]
+- [1 Adafruit METRO M0 Express](https://www.adafruit.com/product/3505)
+- [1 Micro-USB cable](https://www.adafruit.com/product/592)
     - Make sure it transmits data!
-- (Copper Tape)[https://www.amazon.com/Conductive-Shielding-Repellent-Electrical-Grounding/dp/B0741ZRP4W]
+- [Copper Tape](https://www.amazon.com/Conductive-Shielding-Repellent-Electrical-Grounding/dp/B0741ZRP4W)
     - Dimensions depend on the size of your midi keyboard. 12 1/4 inch x 1 inch is sufficient for a small diy keyboard.
-- (Electrical tape)[https://www.amazon.com/Wapodeai-Electrical-Temperature-Resistance-Waterproof/dp/B07ZWC2VLX/ref=zg_bs_256161011_1?_encoding=UTF8&psc=1&refRID=Z468QPXB4F43WRJ2HDTH]
+- [Electrical tape](https://www.amazon.com/Wapodeai-Electrical-Temperature-Resistance-Waterproof/dp/B07ZWC2VLX/ref=zg_bs_256161011_1?_encoding=UTF8&psc=1&refRID=Z468QPXB4F43WRJ2HDTH)
     - Dimensions vary. 12 1/4 inch x 1/4 inch is sufficient for a small diy keyboard.
-- (12 1 megaohm Resistor)[https://www.digikey.com/en/resources/resistors]
-- (Solid core wire)[https://www.digikey.com/catalog/en/partgroup/solid-hook-up-wire/1915]
+- [12 1 megaohm Resistor](https://www.digikey.com/en/resources/resistors)
+- [Solid core wire](https://www.digikey.com/catalog/en/partgroup/solid-hook-up-wire/1915)
     - 5+ feet suggested, to be on the safer side!
 - 3D printed keyboard (optional)
-- (1 Breadboard)[https://www.amazon.com/DEYUE-Solderless-Prototype-Breadboard-Points/dp/B07NVWR495/ref=sr_1_6?dchild=1&keywords=breadboard&qid=1619547333&sr=8-6]
+- [1 Breadboard)](https://www.amazon.com/DEYUE-Solderless-Prototype-Breadboard-Points/dp/B07NVWR495/ref=sr_1_6?dchild=1&keywords=breadboard&qid=1619547333&sr=8-6])
 
 #### Virtual components
-- (1 Digital Audio Workspace (Logic Pro X))[https://www.apple.com/logic-pro/]
-    - (Free alternative: Reaper)[https://www.reaper.fm]
+- [1 Digital Audio Workspace (Logic Pro X)](https://www.apple.com/logic-pro/)
+    - [Free alternative: Reaper](https://www.reaper.fm)
 
 <!-- You can find the comprehensive bill of materials below: -->
 

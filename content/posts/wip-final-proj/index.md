@@ -314,6 +314,8 @@ However, for some reason, this midi data doesn't "save", nor does it produce sou
 
 ## 3D Model
 
+# Progress: 2021 April 27, Tues
+
 ## Fixing the MIDI not-saving issue
 
 The issue was that the serial port was outputting values that were too high. That's why it was outputting junk, as shown below.
@@ -321,25 +323,90 @@ This problem was address by mapping the values to a certain range. By doing so, 
 I also made variables for the high and low values in order to abstract some of the code.
 I cleaned up and condensed the code as well.
 
+#### Updated code:
+```cpp
+#include <CapacitiveSensor.h>
+
+CapacitiveSensor Sensor = CapacitiveSensor(7,5);  //7 is charge pin.  5 is sense pin.
+byte noteON = 144;//note on command
+
+long currentState = 0;//stroage for current state
+long lastState = 0;//storage for last state
+
+void setup(){
+  Serial.begin(115200);//initialize Serial connection
+}
+void loop(){
+  long sensorValue = Sensor.capacitiveSensor(1000);
+  sensorValue = map(sensorValue, 0,1000000, 0, 127);
+  //map sensor value and go into trackable 
+  // put a plateau on a value/upper threshold
+
+  currentState = sensorValue;
+  int high = 50;
+  int low = 0;
+  if (currentState > high  && lastState == low){
+    MIDImessage(noteON, 60, 127);//turn note 60 on with 127 velocity
+    delay(200);//crude form of button debouncing
+  } else if(currentState <= high  && lastState == low){
+    MIDImessage(noteON, 60, 0);//turn note 60 off
+    delay(10);//crude form of button debouncing
+  }
+  lastState = currentState;
+
+//  Serial.println(sensorValue); // Debugging
+//  Serial.println(currentState);
+}
+//send MIDI message
+void MIDImessage(byte command, byte data1, byte data2) {
+  Serial.write(command);
+  Serial.write(data1);
+  Serial.write(data2);
+}
+```
+
+Here is now the functional capacitive touch (using copper tape) midi control!
+
 ## Bill Of Materials
 
 #### Physical components
-- 1 Adafruit Metro Express 0 Board
-- 1 Micro-USB cable
-- Copper Tape
-- Electrical tape
-- Resistor
-- Connecting wire
+- (1 Adafruit METRO M0 Express)[https://www.adafruit.com/product/3505]
+- (1 Micro-USB cable)[https://www.adafruit.com/product/592]
+    - Make sure it transmits data!
+- (Copper Tape)[https://www.amazon.com/Conductive-Shielding-Repellent-Electrical-Grounding/dp/B0741ZRP4W]
+    - Dimensions depend on the size of your midi keyboard. 12 1/4 inch x 1 inch is sufficient for a small diy keyboard.
+- (Electrical tape)[https://www.amazon.com/Wapodeai-Electrical-Temperature-Resistance-Waterproof/dp/B07ZWC2VLX/ref=zg_bs_256161011_1?_encoding=UTF8&psc=1&refRID=Z468QPXB4F43WRJ2HDTH]
+    - Dimensions vary. 12 1/4 inch x 1/4 inch is sufficient for a small diy keyboard.
+- (10Resistor)[]
+- (Solid core wire)[https://www.digikey.com/catalog/en/partgroup/solid-hook-up-wire/1915]
+    - 5+ feet suggested, to be on the safer side!
 - 3D printed keyboard (optional)
+- (1 Breadboard)[https://www.amazon.com/DEYUE-Solderless-Prototype-Breadboard-Points/dp/B07NVWR495/ref=sr_1_6?dchild=1&keywords=breadboard&qid=1619547333&sr=8-6]
 
 #### Virtual components
-- 1 Digital Audio Workspace (Logic Pro X)
+- (1 Digital Audio Workspace (Logic Pro X))[https://www.apple.com/logic-pro/]
+    - (Free alternative: Reaper)[https://www.reaper.fm]
 
-You can find the comprehensive bill of mateerials here:
+You can find the comprehensive bill of materials below:
 
 ## TODO
-- TCP display
-- On/Off switch
 
+In order to compile the list of next-steps to finish my final project, let's first turn to the original proposal. My final project is to create a MIDI controller. I have now gotten a button and a single square of copper tape to both transmit MIDI data to my DAW. Now, I need to expand this to multiple inputs, i.e. 12 pieces of copper tape. Each sensor should correspond to a specific note on the Western chormatic scale. In order to do this, I not only need to add more sensors to the circuit, but I need to modify the code so that it can send multiple instances of MIDI data. This still needs to be figured out. 
 
+Here are some ideas on how to approach these remaining functionalities:
 
+```cpp
+// check to see if there is a way to write data in a different channel
+// different channel/or note on command correspod to diff tape, 
+// would be another parameter, data3 being the channel
+// do diff if statements for each one
+// multiple note ons
+```
+
+Finally, I need to hook up my circuit into my 3D casing. This might be more of a challenge than expected, and there are not only physical components, but also software components to update. I need to test the different values of the sensors and calibrate them and re-map to the proper range that the DAW and serial monitor can identify so that there is no integer overflow or other issues. Finally, I can calibrate the sensors and program the microcontroller to adjust velocity as well. The issue is that thee keys might be a bit too small for this to work smoothly. I will have to find a work-around.
+
+These are the core properties.
+
+To view additional functionailities that are not core properties, see above. Also, see below.
+- TCP display to display octave change.
+- On/Off switchs

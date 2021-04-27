@@ -366,6 +366,7 @@ void MIDImessage(byte command, byte data1, byte data2) {
 ```
 
 Here is now the functional capacitive touch (using copper tape) midi control!
+{{< youtube id="-aQzK6Gf9UI" title="Capacitive touch" >}}
 
 ## Bill Of Materials
 
@@ -387,7 +388,7 @@ Here is now the functional capacitive touch (using copper tape) midi control!
 - (1 Digital Audio Workspace (Logic Pro X))[https://www.apple.com/logic-pro/]
     - (Free alternative: Reaper)[https://www.reaper.fm]
 
-You can find the comprehensive bill of materials below:
+<!-- You can find the comprehensive bill of materials below: -->
 
 ## TODO
 

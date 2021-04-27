@@ -378,7 +378,7 @@ Here is now the functional capacitive touch (using copper tape) midi control!
     - Dimensions depend on the size of your midi keyboard. 12 1/4 inch x 1 inch is sufficient for a small diy keyboard.
 - (Electrical tape)[https://www.amazon.com/Wapodeai-Electrical-Temperature-Resistance-Waterproof/dp/B07ZWC2VLX/ref=zg_bs_256161011_1?_encoding=UTF8&psc=1&refRID=Z468QPXB4F43WRJ2HDTH]
     - Dimensions vary. 12 1/4 inch x 1/4 inch is sufficient for a small diy keyboard.
-- (10Resistor)[]
+- (12 1 megaohm Resistor)[https://www.digikey.com/en/resources/resistors]
 - (Solid core wire)[https://www.digikey.com/catalog/en/partgroup/solid-hook-up-wire/1915]
     - 5+ feet suggested, to be on the safer side!
 - 3D printed keyboard (optional)

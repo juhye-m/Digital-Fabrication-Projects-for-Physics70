@@ -411,3 +411,36 @@ These are the core properties.
 To view additional functionailities that are not core properties, see above. Also, see below.
 - TCP display to display octave change.
 - On/Off switchs
+
+## May 11 update
+
+```cpp
+// global assignments
+  int c = 0; 
+  int d = 1; 
+  int e = 2;
+  int f = 3;
+  int g = 4;
+  int a = 5;
+  int b = 6;
+  
+// example: getnoteValue(c, false, 0); returns 60, which is C4
+// this function gets midi value of a note (where note is a number from 0-6 that represents white keys)
+int getNoteValue(int note, bool sharp = false, int octave = 0) { // optional parameters. -1 is lower, 1 is upper
+  int tones[] = { 60, 62, 64, 65, 67, 69, 71 }; // natural notes in C4  
+  
+  int midiVal = tones[note]; // default
+  
+  // run modifications as needed
+  if (sharp) {
+    midiVal++;
+  }
+  if (octave == 1) {
+    midiVal += 12;
+  }
+  else if (octave == -1) {
+    midiVal -= 12;
+  }
+  return midiVal; 
+}
+```

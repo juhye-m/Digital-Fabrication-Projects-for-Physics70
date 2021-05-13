@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on JuHye Mun</title>
+    <link>https://juhye-m.github.io/ps70/posts/</link>
+    <description>Recent content in Posts on JuHye Mun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 May 2021 03:29:48 -0700</lastBuildDate><atom:link href="https://juhye-m.github.io/ps70/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Finished Final Project</title>
+      <link>https://juhye-m.github.io/ps70/posts/finalproject/</link>
+      <pubDate>Wed, 12 May 2021 03:29:48 -0700</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/finalproject/</guid>
+      <description>JuHye&amp;rsquo;s Final Project: Portable MIDI Keyboard Controller   Description: A lightweight MIDI virtual instrument made from scratch (with an microcontroller~). Weight: 12 oz. Height x Width: 4.0 inch x 8.0 inch. With casing: 6.0 inch x 8.0 inch
+Final version of my code. All versions of my code.
+Why a MIDI keyboard? As a Californian who flies back and forth to Boston for school, I often find myself forced to leave behind my instruments on the other side of the country.</description>
+    </item>
+    
+    <item>
+      <title>Week 12</title>
+      <link>https://juhye-m.github.io/ps70/posts/week12/</link>
+      <pubDate>Mon, 19 Apr 2021 10:35:42 -0700</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week12/</guid>
+      <description>Week 12 Molding and Casting This week was molding and casting week, so I looked around my room for something interesting to make a mold out of. After feeling like I didn&amp;rsquo;t have something cool (I left my trinkets at home), I finally decided to make a mold of my perfume bottle cap. It looks like this!
+ Perfume cap   Perfume cap side 
+I liked how the bottom sat flat on the ground, and how the figure resembles a human.</description>
+    </item>
+    
+    <item>
+      <title>WIP Final Project</title>
+      <link>https://juhye-m.github.io/ps70/posts/wip-final-proj/</link>
+      <pubDate>Tue, 13 Apr 2021 12:44:06 -0700</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/wip-final-proj/</guid>
+      <description>Compilation of Working Documentation for Final Project Proposal Brainstorm/Other Ideas &amp;ldquo;Hands Off&amp;rdquo; Color Tracking 3D MIDI controller with ESP32 Cam For my final project, I aim to build a midi controller where a person can change instrument sounds just by holding their hand up or horizontally or down. Because of the &amp;ldquo;hands off&amp;rdquo; concept, the musician/producer doesn&amp;rsquo;t have to rely on a bulky piece of hardware. The project could incorporate different sensors such as light, movement, and visual sensors (such as a camera).</description>
+    </item>
+    
+    <item>
+      <title>Week 9</title>
+      <link>https://juhye-m.github.io/ps70/posts/week-9/</link>
+      <pubDate>Sat, 27 Mar 2021 21:48:03 -0800</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week-9/</guid>
+      <description>Week 9 BLE: LED on/off control This week, I programmed my Huzzah board to respond to a BLE connection. I downloaded the BLE Scanner app by Bluepixel Technologies onto my iPhone.
+Here&amp;rsquo;s what the product looked like:   Here&amp;rsquo;s my code as a code snippet. (Code snippets in markdown can be embedded with 3 backward ticks):
+/* Based on Neil Kolban example for IDF: https://github.com/nkolban/esp32-snippets/blob/master/cpp_utils/tests/BLE%20Tests/SampleWrite.cpp Ported to Arduino ESP32 by Evandro Copercini */ #include &amp;lt;BLEDevice.</description>
+    </item>
+    
+    <item>
+      <title>Week 4</title>
+      <link>https://juhye-m.github.io/ps70/posts/week4/</link>
+      <pubDate>Mon, 22 Feb 2021 21:48:03 -0800</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week4/</guid>
+      <description>Week 4: Microcontroller Programming This week, I created a simple button-controlled music player!
+Materials I used the M0 Metro Circuit from Adafruit, a piezo speaker, a button, and the breadboard from the PS 70 kit to start.
+I first used the button circuit from class as inspiration. I attached a button and a resistor from ground to one of its legs. Then I connected this leg to digital input 8 so that I can program the button&amp;rsquo;s functionality.</description>
+    </item>
+    
+    <item>
+      <title>Week3</title>
+      <link>https://juhye-m.github.io/ps70/posts/week3/</link>
+      <pubDate>Fri, 12 Feb 2021 21:48:03 -0800</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week3/</guid>
+      <description>Week 3: Kinetic Sculpture This week, I created a Valentine&amp;rsquo;s day themed rotating bird as a kinetic sculpture. This was definitely a journey &amp;ndash; it evolved into something much more fun that I anticipated!
+Materials I used the M0 Metro Circuit from Adafruit, a potentiometer, a moter, and the breadboard from the PS 70 kit to start. Circuit inspired by class:  Circuit 
+Attached the motor to the lego wheels and 3D printed structures from the hardware packet.</description>
+    </item>
+    
+    <item>
+      <title>Week 2</title>
+      <link>https://juhye-m.github.io/ps70/posts/week-2/</link>
+      <pubDate>Fri, 05 Feb 2021 15:42:05 -0800</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week-2/</guid>
+      <description>Press Fit Construction Kit For this assignment, I collaborated with Hugh and Amy to create a cardboard press-fit kit for lampshades. I got this idea from a beautiful wooden lamp that I had seen on the internet:
+ Photo from google images 
+I realized that none of us were artists, and so we decided to create geometric patterns that would create a &amp;ldquo;starlight&amp;rdquo; effect over a lightbulb, like these:</description>
+    </item>
+    
+    <item>
+      <title>PS 70 Project Proposal</title>
+      <link>https://juhye-m.github.io/ps70/posts/proposal/</link>
+      <pubDate>Sun, 31 Jan 2021 17:41:13 -0800</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/proposal/</guid>
+      <description>For my final project, I aim to build a midi controller where a person can change instrument sounds just by holding their hand up or horizontally or down. Because of the &amp;ldquo;hands off&amp;rdquo; concept, the musician/producer doesn&amp;rsquo;t have to rely on a bulky piece of hardware. The project could incorporate different sensors such as light, movement, and visual sensors (such as a camera). This product would simulate a two-dimensional plane, where each axis represents some customizable parameter to an instrument.</description>
+    </item>
+    
+    <item>
+      <title>Week 10</title>
+      <link>https://juhye-m.github.io/ps70/posts/week-10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week-10/</guid>
+      <description>Week 10 Final project This week, I worked a lot on my final project. My final project idea is to create a midi keyboard that can be controlled from different software that allows you to create music, so Digital Audio Workstations. First, in terms of the physical aspect of my product, I needed to think about how I want to implement input. There were different ideas I had, including buttons and copper tape as well as a potentiometer.</description>
+    </item>
+    
+    <item>
+      <title>Week 11</title>
+      <link>https://juhye-m.github.io/ps70/posts/week11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week11/</guid>
+      <description>Week 11 Color Tracking Web cam! This week, I decided to tackle working with the ESP32 Cam and colortrack with OpenCV.js. Important notes included engaging the reset button onboard while connecting, and disconnecting the ground and GPIO pins after uploading the code. Once I had the program and board set up and working, it was time to manipulate the OpenCV application! It was difficult at first to set a good mask to track my blue-colored object.</description>
+    </item>
+    
+    <item>
+      <title>Week 5</title>
+      <link>https://juhye-m.github.io/ps70/posts/week-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week-5/</guid>
+      <description>Week 5: 3D This week, I started an motion sensored alarm watch model.
+Fusion 360 This model is inspired by the Apple Watch wrist band that ibudman! created.
+Here, I used components from the PS70 kit, and imported them into my watch file through the insert function in Fusion 360. I used the Arduino microcontroller, piezo buzzer, battery 5V, and the accelerometer gyroscope. The microcontroller would hold the program that would play the buzzer while the gyroscope was not detecting movement.</description>
+    </item>
+    
+    <item>
+      <title>Week 6</title>
+      <link>https://juhye-m.github.io/ps70/posts/week-6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week-6/</guid>
+      <description>Week 6: Sensors This week, I used an accelerometer to measure the XYZ location and the acceration of my breadboard!
+Materials I used the M0 Metro Circuit from Adafruit, and an Adafruit lis3dh accelerometer from the ps70 kit.
+I followed along this Adafruit Guide! at first in order to gain a better understanding of how this sensor works.
+How It Works The Adafruit LIS3DH triple-Axis Accelerometer Breakout has three axis sensing.</description>
+    </item>
+    
+    <item>
+      <title>Week 7</title>
+      <link>https://juhye-m.github.io/ps70/posts/week7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week7/</guid>
+      <description>Week 7 I had many ideas this week The first one was to create a mic-sensor controlled led output that lit up when the sound threshold past a certain point. The other was to use the feather controller to build upon my project from a couple weeks ago with the piezo speaker and music! Finally, for section, I created this awesome webcam.
+Mic sensor For this project, I knew that I needed to wire up the mic and the LED with the m0 microcontroller such that the microphone was the input and the LED light was the output.</description>
+    </item>
+    
+  </channel>
+</rss>

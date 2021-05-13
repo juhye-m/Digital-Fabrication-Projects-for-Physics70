@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Week 6: Sensors This week, I used an accelerometer to measure the XYZ location and the acceration of my breadboard!
+Materials I used the M0 Metro Circuit from Adafruit, and an Adafruit lis3dh accelerometer from the ps70 kit.
+I followed along this Adafruit Guide! at first in order to gain a better understanding of how this sensor works.
+How It Works The Adafruit LIS3DH triple-Axis Accelerometer Breakout has three axis sensing.'><title>Week 6</title>
+
+<link rel='canonical' href='https://juhye-m.github.io/ps70/posts/week-6/'>
+
+<link rel="stylesheet" href="/ps70/scss/style.min.css"><meta property='og:title' content='Week 6'>
+<meta property='og:description' content='Week 6: Sensors This week, I used an accelerometer to measure the XYZ location and the acceration of my breadboard!
+Materials I used the M0 Metro Circuit from Adafruit, and an Adafruit lis3dh accelerometer from the ps70 kit.
+I followed along this Adafruit Guide! at first in order to gain a better understanding of how this sensor works.
+How It Works The Adafruit LIS3DH triple-Axis Accelerometer Breakout has three axis sensing.'>
+<meta property='og:url' content='https://juhye-m.github.io/ps70/posts/week-6/'>
+<meta property='og:site_name' content='JuHye Mun'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' />
+<meta name="twitter:title" content="Week 6">
+<meta name="twitter:description" content="Week 6: Sensors This week, I used an accelerometer to measure the XYZ location and the acceration of my breadboard!
+Materials I used the M0 Metro Circuit from Adafruit, and an Adafruit lis3dh accelerometer from the ps70 kit.
+I followed along this Adafruit Guide! at first in order to gain a better understanding of how this sensor works.
+How It Works The Adafruit LIS3DH triple-Axis Accelerometer Breakout has three axis sensing.">
+    </head>
+    <body class="article-page keep-sidebar">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column compact ">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/ps70/img/avatar_hue776a334b902d7828bf5c7a8aa11ccb3_243528_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">👾</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://juhye-m.github.io/ps70/">JuHye Mun</a></h1>
+        <h2 class="site-description">Blog for PS70</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/ps70/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/ps70/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/ps70/posts/week-6/">Week 6</a>
+    </h2>
+
+    </div>
+</header>
+
+    <section class="article-content">
+    <h2 id="week-6-sensors">Week 6: Sensors</h2>
+<p>This week, I used an accelerometer to measure the XYZ location and the acceration of my breadboard!</p>
+<h4 id="materials">Materials</h4>
+<p>I used the M0 Metro Circuit from Adafruit, and an Adafruit lis3dh accelerometer from the ps70 kit.</p>
+<p>I followed along this <a class="link" href="https://learn.adafruit.com/adafruit-lis3dh-triple-axis-accelerometer-breakout/arduino"  target="_blank" rel="noopener"
+    >Adafruit Guide!</a> at first in order to gain a better understanding of how this sensor works.</p>
+<h4 id="how-it-works">How It Works</h4>
+<p>The Adafruit LIS3DH triple-Axis Accelerometer Breakout has three axis sensing. The senor communicates both through l2C or SPI, for hardware and software control. l2C works with 2 wires, the Serial Clock (SCL) and Serial Data (SDA).</p>
+<p>I connected Vin to the power supple of 5V, the ground pin to ground, the SCL (SCK) pin to Digital #13, the SDO pin to Digital #12, the SDA (SDI) to Digital pin #11, and the CS pin to Digital #10.</p>
+<p>The CS pin is the chip select pin, which is a command pin that connects the I/O pins on the accelerometer to the internal circuitry .. something to learn more about!</p>
+<p><figure style="flex-grow: 133; flex-basis: 320px">
+		<a href="/ps70/posts/week-6/accelboard.jpg" data-size="4032x3024"><img src="/ps70/posts/week-6/accelboard.jpg"
+				srcset="/ps70/posts/week-6/accelboard_hudd7324c7f106ae494a74d6bf7220b557_1903540_480x0_resize_q75_box.jpg 480w, /ps70/posts/week-6/accelboard_hudd7324c7f106ae494a74d6bf7220b557_1903540_1024x0_resize_q75_box.jpg 1024w"
+				width="4032"
+				height="3024"
+				loading="lazy"
+				alt="Button">
+		</a>
+		
+		<figcaption>Button</figcaption>
+		
+	</figure></p>
+<h4 id="code">Code</h4>
+<p>I got the initial code from the Adafruit acceleration example! I had to download a few libraries in order to get there.</p>
+<h4 id="calibrating">Calibrating</h4>
+<p>I wasn&rsquo;t actually sure how to calibrate this accelerometer. I played around with the accelerometer to move it back and forth and different speeds. As I move it back and forth, I suspected that the faster I move it, the more acceleration there would be, especially during my &ldquo;turning points&rdquo; when I switch from moving it one direction to another.</p>
+<!-- raw HTML omitted -->
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe loading="lazy" src="https://www.youtube.com/embed/Gh7k_WlOMco" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>However, I don&rsquo;t think this was the best way of testing, as I didn&rsquo;t get much of a takeaway result. It might be that the m/s^2 is too large of a unit.</p>
+<p>Another issue I wondered about is why the acceleration was still around 9.8 m/s^s when sitting absolutely still on my desk. Is it possible that the LIS3DH is also measuring the gravitational pull of the Earth? Or is this just a coincidence? I might have to look more into how it works! At first I thought it might be in the code (as a default acceleration that it sets), but I couldn&rsquo;t parse something that seemed to indicate this.</p>
+<p>Here&rsquo;s the original data:</p>
+<!-- raw HTML omitted -->
+<p><figure style="flex-grow: 102; flex-basis: 245px">
+		<a href="/ps70/posts/week-6/chart.png" data-size="1482x1450"><img src="/ps70/posts/week-6/chart.png"
+				srcset="/ps70/posts/week-6/chart_hua7d7bee6ef8c1c63133866f7d99898ad_199400_480x0_resize_box_2.png 480w, /ps70/posts/week-6/chart_hua7d7bee6ef8c1c63133866f7d99898ad_199400_1024x0_resize_box_2.png 1024w"
+				width="1482"
+				height="1450"
+				loading="lazy"
+				alt="Chart">
+		</a>
+		
+		<figcaption>Chart</figcaption>
+		
+	</figure></p>
+<p>This is in the serial moniter, and the data shows us the XYZ data. As you can see, as the accelrmoter is still, these values are near 0.</p>
+<p>And here&rsquo;s the graph:
+<figure style="flex-grow: 162; flex-basis: 389px">
+		<a href="/ps70/posts/week-6/accelgph.png" data-size="1020x628"><img src="/ps70/posts/week-6/accelgph.png"
+				srcset="/ps70/posts/week-6/accelgph_hu66fb39a52d7e95eb6ab91ff2aa7964e0_56425_480x0_resize_box_2.png 480w, /ps70/posts/week-6/accelgph_hu66fb39a52d7e95eb6ab91ff2aa7964e0_56425_1024x0_resize_box_2.png 1024w"
+				width="1020"
+				height="628"
+				loading="lazy"
+				alt="Graph">
+		</a>
+		
+		<figcaption>Graph</figcaption>
+		
+	</figure></p>
+<h4 id="capacitative-sensor">Capacitative sensor</h4>
+<p>A Mask! From class
+<figure style="flex-grow: 133; flex-basis: 320px">
+		<a href="/ps70/posts/week-6/IMG_6443.jpg" data-size="4032x3024"><img src="/ps70/posts/week-6/IMG_6443.jpg"
+				srcset="/ps70/posts/week-6/IMG_6443_hu41df95027e430c57b4481f06ade0268b_2788906_480x0_resize_q75_box.jpg 480w, /ps70/posts/week-6/IMG_6443_hu41df95027e430c57b4481f06ade0268b_2788906_1024x0_resize_q75_box.jpg 1024w"
+				width="4032"
+				height="3024"
+				loading="lazy"
+				alt="Mask">
+		</a>
+		
+		<figcaption>Mask</figcaption>
+		
+	</figure></p>
+<h4 id="graph">Graph</h4>
+<p>As the pressure increases (aka, as the sensors are closer together), the more output!
+<figure style="flex-grow: 162; flex-basis: 389px">
+		<a href="/ps70/posts/week-6/mask.png" data-size="1020x628"><img src="/ps70/posts/week-6/mask.png"
+				srcset="/ps70/posts/week-6/mask_hu66fb39a52d7e95eb6ab91ff2aa7964e0_58812_480x0_resize_box_2.png 480w, /ps70/posts/week-6/mask_hu66fb39a52d7e95eb6ab91ff2aa7964e0_58812_1024x0_resize_box_2.png 1024w"
+				width="1020"
+				height="628"
+				loading="lazy"
+				alt="Graph">
+		</a>
+		
+		<figcaption>Graph</figcaption>
+		
+	</figure></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+    
+</article>
+
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 JuHye Mun
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.0.1">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ps70/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

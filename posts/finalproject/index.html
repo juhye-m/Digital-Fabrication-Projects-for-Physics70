@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='JuHye&amp;rsquo;s Final Project: Portable MIDI Keyboard Controller   Description: A lightweight MIDI virtual instrument made from scratch (with an microcontroller~). Weight: 12 oz. Height x Width: 4.0 inch x 8.0 inch. With casing: 6.0 inch x 8.0 inch
+Final version of my code. All versions of my code.
+Why a MIDI keyboard? As a Californian who flies back and forth to Boston for school, I often find myself forced to leave behind my instruments on the other side of the country.'><title>Finished Final Project</title>
+
+<link rel='canonical' href='https://juhye-m.github.io/ps70/posts/finalproject/'>
+
+<link rel="stylesheet" href="/ps70/scss/style.min.css"><meta property='og:title' content='Finished Final Project'>
+<meta property='og:description' content='JuHye&amp;rsquo;s Final Project: Portable MIDI Keyboard Controller   Description: A lightweight MIDI virtual instrument made from scratch (with an microcontroller~). Weight: 12 oz. Height x Width: 4.0 inch x 8.0 inch. With casing: 6.0 inch x 8.0 inch
+Final version of my code. All versions of my code.
+Why a MIDI keyboard? As a Californian who flies back and forth to Boston for school, I often find myself forced to leave behind my instruments on the other side of the country.'>
+<meta property='og:url' content='https://juhye-m.github.io/ps70/posts/finalproject/'>
+<meta property='og:site_name' content='JuHye Mun'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2021-05-12T03:29:48-07:00'/><meta property='article:modified_time' content='2021-05-12T03:29:48-07:00'/>
+<meta name="twitter:title" content="Finished Final Project">
+<meta name="twitter:description" content="JuHye&amp;rsquo;s Final Project: Portable MIDI Keyboard Controller   Description: A lightweight MIDI virtual instrument made from scratch (with an microcontroller~). Weight: 12 oz. Height x Width: 4.0 inch x 8.0 inch. With casing: 6.0 inch x 8.0 inch
+Final version of my code. All versions of my code.
+Why a MIDI keyboard? As a Californian who flies back and forth to Boston for school, I often find myself forced to leave behind my instruments on the other side of the country.">
+    </head>
+    <body class="article-page keep-sidebar">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column compact ">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/ps70/img/avatar_hue776a334b902d7828bf5c7a8aa11ccb3_243528_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">👾</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://juhye-m.github.io/ps70/">JuHye Mun</a></h1>
+        <h2 class="site-description">Blog for PS70</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/ps70/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/ps70/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/ps70/posts/finalproject/">Finished Final Project</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">May 12, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h1 id="juhyes-final-project-portable-midi-keyboard-controller">JuHye&rsquo;s Final Project: Portable MIDI Keyboard Controller</h1>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe loading="lazy" src="https://www.youtube.com/embed/F2uazovZQ1Y" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>Description: A lightweight MIDI virtual instrument made from scratch (with an microcontroller~).
+Weight: 12 oz. Height x Width: 4.0 inch x 8.0 inch. With casing: 6.0 inch x 8.0 inch</p>
+<p>Final version of my code.
+All versions of my code.</p>
+<h2 id="why-a-midi-keyboard">Why a MIDI keyboard?</h2>
+<p>As a Californian who flies back and forth to Boston for school, I often find myself forced to leave behind my instruments on the other side of the country. This is a huge barrier as a musician.
+Recently, during quarantine, I bought a MIDI keyboard that I love to play and write with. Unfortunately, I know it&rsquo;s only a matter of time before I have to say goodbye to it when I come back to campus in the fall (no jinx&hellip;). It&rsquo;s way too bullky to travel with, at almost 10 lb.
+This brought me to wanting a digital instrument that was much more lightweight.</p>
+<p><figure style="flex-grow: 133; flex-basis: 320px">
+		<a href="/ps70/posts/finalproject/keyboard.jpg" data-size="4032x3024"><img src="/ps70/posts/finalproject/keyboard.jpg"
+				srcset="/ps70/posts/finalproject/keyboard_hu3201e28b84ad4d84f47390828545c91b_1708334_480x0_resize_q75_box.jpg 480w, /ps70/posts/finalproject/keyboard_hu3201e28b84ad4d84f47390828545c91b_1708334_1024x0_resize_q75_box.jpg 1024w"
+				width="4032"
+				height="3024"
+				loading="lazy"
+				alt="Me and my huge keyboard">
+		</a>
+		
+		<figcaption>Me and my huge keyboard</figcaption>
+		
+	</figure></p>
+<h2 id="proposal">Proposal</h2>
+<p>My project is to create a small, lightweight MIDI instrument. My primary sensors will be copper foil, and my design will be inspired by the classic keys of the western piano. The product will be able to be integrated into almost any DAW by translating the serial port data of the microcontroller into digestable data that other applications on my computer can take as input.
+We&rsquo;ll get right into the nitty-gritty of this DIY project.</p>
+<h2 id="materials">Materials</h2>
+<p>For this project, we will need the following components:</p>
+<ul>
+<li><a class="link" href="https://www.adafruit.com/product/3505"  target="_blank" rel="noopener"
+    >1 Adafruit METRO M0 Express</a></li>
+<li><a class="link" href="https://www.adafruit.com/product/592"  target="_blank" rel="noopener"
+    >1 Micro-USB cable</a>
+<ul>
+<li>Make sure it transmits data!</li>
+</ul>
+</li>
+<li><a class="link" href="https://www.amazon.com/Conductive-Shielding-Repellent-Electrical-Grounding/dp/B0741ZRP4W"  target="_blank" rel="noopener"
+    >Copper tape</a>
+<ul>
+<li>Dimensions depend on the size of your midi keyboard. 12 1/4 inch x 1 inch is sufficient for a small diy keyboard.</li>
+</ul>
+</li>
+<li><a class="link" href="https://www.amazon.com/Wapodeai-Electrical-Temperature-Resistance-Waterproof/dp/B07ZWC2VLX/ref=zg_bs_256161011_1?_encoding=UTF8&amp;psc=1&amp;refRID=Z468QPXB4F43WRJ2HDTH"  target="_blank" rel="noopener"
+    >Electrical tape</a>
+<ul>
+<li>Dimensions vary. 12 1/4 inch x 1/4 inch is sufficient for a small diy keyboard.</li>
+</ul>
+</li>
+<li><a class="link" href="https://www.digikey.com/en/resources/resistors"  target="_blank" rel="noopener"
+    >13 47 kilaohm resistors</a></li>
+<li><a class="link" href="https://www.digikey.com/catalog/en/partgroup/solid-hook-up-wire/1915"  target="_blank" rel="noopener"
+    >Solid core wire</a>
+<ul>
+<li>5+ feet suggested, to be on the safer side!</li>
+</ul>
+</li>
+<li><a class="link" href="https://www.amazon.com/uxcell-Female-Jumper-2-54mm-Breadboard/dp/B07FM72VBF/ref=sr_1_18?crid=2TC1J87WAYC9O&amp;dchild=1&amp;keywords=electrical&#43;jumper&#43;wires&#43;female&#43;to&#43;female&amp;qid=1620902792&amp;sprefix=electrical&#43;jumper&#43;wires%2Caps%2C229&amp;sr=8-18"  target="_blank" rel="noopener"
+    >13 Female to female jumper wires</a></li>
+<li><a class="link" href="https://www.amazon.com/DEYUE-Solderless-Prototype-Breadboard-Points/dp/B07NVWR495/ref=sr_1_6?dchild=1&amp;keywords=breadboard&amp;qid=1619547333&amp;sr=8-6]"  target="_blank" rel="noopener"
+    >1 Breadboard)</a>
+<ul>
+<li>(and one smaller breadboard)</li>
+</ul>
+</li>
+<li><a class="link" href="https://www.amazon.com/Momentary-Tactile-Through-Breadboard-Friendly/dp/B07WF76VHT?ref_=Oct_s9_apbd_otopr_hd_bw_b6GQCmB&amp;pf_rd_r=Y7GBPXHGVFGR172HMQFF&amp;pf_rd_p=c088ae4d-8e6e-5dd1-bd97-f107186170d5&amp;pf_rd_s=merchandised-search-10&amp;pf_rd_t=BROWSE&amp;pf_rd_i=5739464011"  target="_blank" rel="noopener"
+    >1 push button</a></li>
+<li>1 10k ohm resistor</li>
+<li>[Casing (Optional)]
+<ul>
+<li>3D printed keyboard (optional)</li>
+<li>Cardboard (optional)</li>
+<li>Plastic bin (optional)</li>
+</ul>
+</li>
+</ul>
+<h4 id="virtual-components">Virtual components</h4>
+<ul>
+<li><a class="link" href="https://www.apple.com/logic-pro/"  target="_blank" rel="noopener"
+    >1 Digital Audio Workspace (Logic Pro X)</a>
+<ul>
+<li><a class="link" href="https://www.reaper.fm"  target="_blank" rel="noopener"
+    >Free alternative: Reaper</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="part-1-midi">Part 1: MIDI</h2>
+<h4 id="what-is-midi">What is MIDI?</h4>
+<p>MIDI refers to a protocol for communication, digital interface, and electrical connectors  &ndash; formally called Musical Instrument Digital Interface. It was developed in the 80s. The reason why MIDI devices do not produce audio on their own is because MIDI does not provide actual audio signals. It is simply data and information that does not include audio signals.</p>
+<h4 id="what-is-iac">What is IAC?</h4>
+<p>IAC stands for Inter-Application Communitation. The IAC Driver is Apple&rsquo;s default MIDI device that you can use to communicate to Applications (such as Logic Pro X) that I use here. I must set up IAC drivers &ndash; it doesn&rsquo;t set itself up automatically.</p>
+<h4 id="serial-midi">Serial MIDI</h4>
+<p>Before I worked on all of other elements, I needed to work on the software side and make sure I can run a very simple MIDI data transmission. In order to do that and to make sure that this idea would work, I set up a simple button control ciruit.
+Because I wanted to avoid buying more parts including midi input and midi wires, I researched how I could use alternative ways to do this project. I found a few blogs that used &ldquo;Hairless MIDI&rdquo; which is a software that allowed access to the Arduino serial monitor and converted the data to midi. Unfortunately, it turns out that Hairless midi stopped working on the new Mac OS!! This was extrememely disappointing. However, I found a github repository that created a python version of Hairless midi. It was just one man, Ryan Kojima, who wrote this up, and there was little documentation. So, I&rsquo;ve detailed my own documentation for this program:</p>
+<!-- raw HTML omitted -->
+<p>First we import the necessary libraries. The serial library makes serial ports accessible from your program. The rtmidi library consists of C++ classes to provide an API (Application Programming Interface) for MIDI input and output. Read more about the <a class="link" href="https://pyserial.readthedocs.io/en/latest/"  target="_blank" rel="noopener"
+    >serial</a> and <a class="link" href="https://pypi.org/project/python-rtmidi/"  target="_blank" rel="noopener"
+    >rtmidi</a> libraries as linked. Note that we also use the Python threading library. Threading lets us run multiple &ldquo;threads&rdquo;, or tasks, in parallel. You can learn the basics on this <a class="link" href="https://en.wikibooks.org/wiki/Python_Programming/Threading"  target="_blank" rel="noopener"
+    >Wiki page</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> time
+<span style="color:#f92672">import</span> queue
+<span style="color:#f92672">import</span> rtmidi
+<span style="color:#f92672">import</span> serial
+<span style="color:#f92672">import</span> threading
+<span style="color:#f92672">import</span> logging
+<span style="color:#f92672">import</span> sys
+<span style="color:#f92672">import</span> time
+<span style="color:#f92672">import</span> argparse
+</code></pre></div><p>We take as input and then parse the command-line arguments into a list. The program allows for 5 arguments. You must provide the name of the serial port you are trying to read from. You also should provide the baud rate, and the midi in and out names. If you don&rsquo;t provide the latter 3 arguments, they default to the respective strings (see below). You can add a debug flag to help debug issues you may have.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">parser <span style="color:#f92672">=</span> argparse<span style="color:#f92672">.</span>ArgumentParser(description <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Serial MIDI bridge&#34;</span>)
+
+parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#34;--serial_name&#34;</span>, type<span style="color:#f92672">=</span>str, required <span style="color:#f92672">=</span> True, help <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Serial port name. Required&#34;</span>)
+parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#34;--baud&#34;</span>, type<span style="color:#f92672">=</span>int, default<span style="color:#f92672">=</span><span style="color:#ae81ff">115200</span>, help <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;baud rate. Default is 115200&#34;</span>)
+parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#34;--midi_in_name&#34;</span>, type<span style="color:#f92672">=</span>str, default <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;IAC Bus 1&#34;</span>)
+parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#34;--midi_out_name&#34;</span>, type<span style="color:#f92672">=</span>str, default <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;IAC Bus 2&#34;</span>)
+parser<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#34;--debug&#34;</span>, action <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;store_true&#34;</span>, help <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Print incoming / outgoing MIDI signals&#34;</span>)
+
+args <span style="color:#f92672">=</span> parser<span style="color:#f92672">.</span>parse_args()
+
+thread_running <span style="color:#f92672">=</span> True
+
+<span style="color:#75715e"># Arguments</span>
+serial_port_name <span style="color:#f92672">=</span> args<span style="color:#f92672">.</span>serial_name <span style="color:#75715e">#&#39;/dev/cu.SLAB_USBtoUART&#39;</span>
+serial_baud <span style="color:#f92672">=</span> args<span style="color:#f92672">.</span>baud
+given_port_name_in <span style="color:#f92672">=</span> args<span style="color:#f92672">.</span>midi_in_name <span style="color:#75715e">#&#34;IAC Bus 1&#34;</span>
+given_port_name_out <span style="color:#f92672">=</span> args<span style="color:#f92672">.</span>midi_out_name <span style="color:#75715e">#&#34;IAC Bus 2&#34;</span>
+
+<span style="color:#66d9ef">if</span> args<span style="color:#f92672">.</span>debug:
+    logging<span style="color:#f92672">.</span>basicConfig(level <span style="color:#f92672">=</span> logging<span style="color:#f92672">.</span>DEBUG)
+<span style="color:#66d9ef">else</span>:
+    logging<span style="color:#f92672">.</span>basicConfig(level <span style="color:#f92672">=</span> logging<span style="color:#f92672">.</span>INFO)
+
+</code></pre></div><p>Here, we deal with MIDI data. We have our midi data, which comes in three numbers, from our code which we will go over later: the command, the note, and the velocity. The command follows midi protocol, where <a class="link" href="https://computermusicresource.com/MIDI.Commands.html"  target="_blank" rel="noopener"
+    >each number has a designated function</a>. The second argument gives the tone of the note, and the third is the loudness. The program here adds these midi data messages into a queue that we can go through, and decode using the midi protocol.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">midi_ready <span style="color:#f92672">=</span> False
+midiin_message_queue <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span>Queue()
+midiout_message_queue <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span>Queue()
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_midi_length</span>(message):
+    <span style="color:#66d9ef">if</span> len(message) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">100</span>
+    opcode <span style="color:#f92672">=</span> message[<span style="color:#ae81ff">0</span>]
+    <span style="color:#66d9ef">if</span> opcode <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0xf4</span>:
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">if</span> opcode <span style="color:#f92672">in</span> [ <span style="color:#ae81ff">0xf1</span>, <span style="color:#ae81ff">0xf3</span> ]:
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">2</span>
+    <span style="color:#66d9ef">if</span> opcode <span style="color:#f92672">==</span> <span style="color:#ae81ff">0xf2</span>:
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">3</span>
+    <span style="color:#66d9ef">if</span> opcode <span style="color:#f92672">==</span> <span style="color:#ae81ff">0xf0</span>:
+        <span style="color:#66d9ef">if</span> message[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0xf7</span>:
+            <span style="color:#66d9ef">return</span> len(message)
+
+    opcode <span style="color:#f92672">=</span> opcode <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0xf0</span>
+    <span style="color:#66d9ef">if</span> opcode <span style="color:#f92672">in</span> [ <span style="color:#ae81ff">0x80</span>, <span style="color:#ae81ff">0x90</span>, <span style="color:#ae81ff">0xa0</span>, <span style="color:#ae81ff">0xb0</span>, <span style="color:#ae81ff">0xe0</span> ]:
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">3</span>
+    <span style="color:#66d9ef">if</span> opcode <span style="color:#f92672">in</span> [ <span style="color:#ae81ff">0xc0</span>, <span style="color:#ae81ff">0xd0</span> ]:
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">2</span>
+
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">100</span>
+</code></pre></div><p>Next, we access the serial port. Recall that we need this program to allow communication between the microcontroller&rsquo;s serial port and its outputted midi data to go to other applications. This program is then essentially a translator, or a middle man. The program is continuously watching the serial port in a while loop so that no data slips through.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">serial_writer</span>():
+    <span style="color:#66d9ef">while</span> midi_ready <span style="color:#f92672">==</span> False:
+        time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.1</span>)
+    <span style="color:#66d9ef">while</span> thread_running:
+        <span style="color:#66d9ef">try</span>:
+            message <span style="color:#f92672">=</span> midiin_message_queue<span style="color:#f92672">.</span>get(timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">0.4</span>)
+        <span style="color:#66d9ef">except</span> queue<span style="color:#f92672">.</span>Empty:
+            <span style="color:#66d9ef">continue</span>
+        logging<span style="color:#f92672">.</span>debug(message)
+        value <span style="color:#f92672">=</span> bytearray(message)
+        ser<span style="color:#f92672">.</span>write(value)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">serial_watcher</span>():
+    receiving_message <span style="color:#f92672">=</span> []
+    running_status <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#66d9ef">while</span> midi_ready <span style="color:#f92672">==</span> False:
+        time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.1</span>)
+
+    <span style="color:#66d9ef">while</span> thread_running:
+        data <span style="color:#f92672">=</span> ser<span style="color:#f92672">.</span>read()
+        <span style="color:#66d9ef">if</span> data:
+            <span style="color:#66d9ef">for</span> elem <span style="color:#f92672">in</span> data:
+                receiving_message<span style="color:#f92672">.</span>append(elem)
+            <span style="color:#75715e">#Running status</span>
+            <span style="color:#66d9ef">if</span> len(receiving_message) <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+                <span style="color:#66d9ef">if</span> (receiving_message[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">&amp;</span><span style="color:#ae81ff">0xf0</span>) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>:
+                    running_status <span style="color:#f92672">=</span> receiving_message[<span style="color:#ae81ff">0</span>]
+                <span style="color:#66d9ef">else</span>:
+                    receiving_message <span style="color:#f92672">=</span> [ running_status, receiving_message[<span style="color:#ae81ff">0</span>] ]
+
+            message_length <span style="color:#f92672">=</span> get_midi_length(receiving_message)
+            <span style="color:#66d9ef">if</span> message_length <span style="color:#f92672">&lt;=</span> len(receiving_message):
+                logging<span style="color:#f92672">.</span>debug(receiving_message)
+                midiout_message_queue<span style="color:#f92672">.</span>put(receiving_message)
+                receiving_message <span style="color:#f92672">=</span> []
+
+</code></pre></div><p>The program then needs to take the midi messages and actually channel it into the IAC buses that I created. It does so by creating a midi input handler, and it tells the bus timestamps along with the data. Finally, the program outlines debugging and other logistical functions, such as quit program.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">midi_input_handler</span>(object):
+    <span style="color:#66d9ef">def</span> __init__(self, port):
+        self<span style="color:#f92672">.</span>port <span style="color:#f92672">=</span> port
+        self<span style="color:#f92672">.</span>_wallclock <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+
+    <span style="color:#66d9ef">def</span> __call__(self, event, data<span style="color:#f92672">=</span>None):
+        message, deltatime <span style="color:#f92672">=</span> event
+        self<span style="color:#f92672">.</span>_wallclock <span style="color:#f92672">+=</span> deltatime
+        <span style="color:#75715e">#logging.debug(&#34;[%s] @%0.6f %r&#34; % (self.port, self._wallclock, message))</span>
+        midiin_message_queue<span style="color:#f92672">.</span>put(message)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">midi_watcher</span>():
+    <span style="color:#66d9ef">global</span> midi_ready, thread_running
+
+    midiin <span style="color:#f92672">=</span> rtmidi<span style="color:#f92672">.</span>MidiIn()
+    midiout <span style="color:#f92672">=</span> rtmidi<span style="color:#f92672">.</span>MidiOut()
+    available_ports_out <span style="color:#f92672">=</span> midiout<span style="color:#f92672">.</span>get_ports()
+    available_ports_in <span style="color:#f92672">=</span> midiin<span style="color:#f92672">.</span>get_ports()
+    logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;IN : &#39;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;,&#39;&#34;</span><span style="color:#f92672">.</span>join(available_ports_in) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span>)
+    logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;OUT : &#39;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;,&#39;&#34;</span><span style="color:#f92672">.</span>join(available_ports_out) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span>)
+    logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;Hit ctrl-c to exit&#34;</span>)
+
+    port_index_in <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+    port_index_out <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">for</span> i, s <span style="color:#f92672">in</span> enumerate(available_ports_in):
+        <span style="color:#66d9ef">if</span> given_port_name_in <span style="color:#f92672">in</span> s:
+            port_index_in <span style="color:#f92672">=</span> i
+    <span style="color:#66d9ef">for</span> i, s <span style="color:#f92672">in</span> enumerate(available_ports_out):
+        <span style="color:#66d9ef">if</span> given_port_name_out <span style="color:#f92672">in</span> s:
+            port_index_out <span style="color:#f92672">=</span> i
+
+    <span style="color:#66d9ef">if</span> port_index_in <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;MIDI IN Device name is incorrect. Please use listed device name.&#34;</span>)
+    <span style="color:#66d9ef">if</span> port_index_out <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;MIDI OUT Device name is incorrect. Please use listed device name.&#34;</span>)
+    <span style="color:#66d9ef">if</span> port_index_in <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> port_index_out <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+        thread_running <span style="color:#f92672">=</span> False
+        midi_ready <span style="color:#f92672">=</span> True
+        sys<span style="color:#f92672">.</span>exit()
+
+    midiout<span style="color:#f92672">.</span>open_port(port_index_out)
+    in_port_name <span style="color:#f92672">=</span> midiin<span style="color:#f92672">.</span>open_port(port_index_in)
+
+    midi_ready <span style="color:#f92672">=</span> True
+
+    midiin<span style="color:#f92672">.</span>ignore_types(sysex <span style="color:#f92672">=</span> False, timing <span style="color:#f92672">=</span> False, active_sense <span style="color:#f92672">=</span> False)
+    midiin<span style="color:#f92672">.</span>set_callback(midi_input_handler(in_port_name))
+
+    <span style="color:#66d9ef">while</span> thread_running:
+        <span style="color:#66d9ef">try</span>:
+            message <span style="color:#f92672">=</span> midiout_message_queue<span style="color:#f92672">.</span>get(timeout <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.4</span>)
+        <span style="color:#66d9ef">except</span> queue<span style="color:#f92672">.</span>Empty:
+            <span style="color:#66d9ef">continue</span>
+        midiout<span style="color:#f92672">.</span>send_message(message)
+
+<span style="color:#66d9ef">try</span>:
+    ser <span style="color:#f92672">=</span> serial<span style="color:#f92672">.</span>Serial(serial_port_name,serial_baud)
+    ser<span style="color:#f92672">.</span>setDTR()
+<span style="color:#66d9ef">except</span> serial<span style="color:#f92672">.</span>serialutil<span style="color:#f92672">.</span>SerialException:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Serial port opening error.&#34;</span>)
+    midi_watcher()
+    sys<span style="color:#f92672">.</span>exit()
+
+ser<span style="color:#f92672">.</span>timeout <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.4</span>
+
+s_watcher <span style="color:#f92672">=</span> threading<span style="color:#f92672">.</span>Thread(target <span style="color:#f92672">=</span> serial_watcher)
+s_writer <span style="color:#f92672">=</span> threading<span style="color:#f92672">.</span>Thread(target <span style="color:#f92672">=</span> serial_writer)
+m_watcher <span style="color:#f92672">=</span> threading<span style="color:#f92672">.</span>Thread(target <span style="color:#f92672">=</span> midi_watcher)
+
+s_watcher<span style="color:#f92672">.</span>start()
+s_writer<span style="color:#f92672">.</span>start()
+m_watcher<span style="color:#f92672">.</span>start()
+
+<span style="color:#75715e">#Ctrl-C handler</span>
+<span style="color:#66d9ef">try</span>:
+    <span style="color:#66d9ef">while</span> True:
+        time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">1</span>)
+<span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyboardInterrupt</span>:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Terminating.&#34;</span>)
+    thread_running <span style="color:#f92672">=</span> False
+    sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">0</span>)
+</code></pre></div><p>In order for this software to work and to communicate between the DAW as well as the serial monitor for my Metro, I had to create new IAP audio inputs and outputs. These are busses that allow for the audio to be channeled later in the DAW.</p>
+<p><figure style="flex-grow: 109; flex-basis: 262px">
+		<a href="/ps70/posts/finalproject/iap.png" data-size="952x870"><img src="/ps70/posts/finalproject/iap.png"
+				srcset="/ps70/posts/finalproject/iap_hu51713f75c615b082285f8b7ffc6c82b8_171107_480x0_resize_box_2.png 480w, /ps70/posts/finalproject/iap_hu51713f75c615b082285f8b7ffc6c82b8_171107_1024x0_resize_box_2.png 1024w"
+				width="952"
+				height="870"
+				loading="lazy"
+				alt="IAP">
+		</a>
+		
+		<figcaption>IAP</figcaption>
+		
+	</figure></p>
+<p>I had some trouble getting this to work, however. I kept getting the error that my serial port was unable to open.</p>
+<p><figure style="flex-grow: 509; flex-basis: 1223px">
+		<a href="/ps70/posts/finalproject/err.png" data-size="1672x328"><img src="/ps70/posts/finalproject/err.png"
+				srcset="/ps70/posts/finalproject/err_hu0160ec8d2a12cf82f36633c1e9c94be2_273482_480x0_resize_box_2.png 480w, /ps70/posts/finalproject/err_hu0160ec8d2a12cf82f36633c1e9c94be2_273482_1024x0_resize_box_2.png 1024w"
+				width="1672"
+				height="328"
+				loading="lazy"
+				alt="Error">
+		</a>
+		
+		<figcaption>Error</figcaption>
+		
+	</figure></p>
+<p>After trying different debugging methods, such as looking at the code carefully, checking serial monitor output, and other possible issues, I learned from Professor Melenbrink that the issue is that I can&rsquo;t have the serial monitor open in two places (so when the program runs, that counts), which I was reminded of.</p>
+<h4 id="part-1-product-simple-button-midi-circuit">Part 1 Product: Simple button MIDI circuit</h4>
+<p>Then, I plugged my midi button circuit as input to my DAW, Logic Pro, and here is the result!</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe loading="lazy" src="https://www.youtube.com/embed/0X2GHs5goP4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>For my code, I used the MIDImessage Arduino function. It takes as parameters (noteON, pitch, velocity). These are decimal values, which are converted into binary. More info <a class="link" href="https://www.instructables.com/What-is-MIDI/"  target="_blank" rel="noopener"
+    >here</a>!</p>
+<h2 id="part-2-capacitive-touch">Part 2: Capacitive Touch</h2>
+<p>I wrote custom code to measure capacitive touch and turn that data into midi data to use in a DAW!
+First, I set up my circuit like so (this is something we went over in earlier weeks):</p>
+<p><img src="capactive.jpg" alt="Capacitive sensor"  /></p>
+<p>I used the Arduino CapacitiveSensor library.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;CapacitiveSensor.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+CapacitiveSensor Sensor <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">5</span>);  <span style="color:#75715e">//7 is charge pin.  5 is sense pin.
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>(){
+  Serial.begin(<span style="color:#ae81ff">115200</span>);<span style="color:#75715e">//initialize Serial connection
+</span><span style="color:#75715e"></span>}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>(){
+  <span style="color:#66d9ef">long</span> sensorValue <span style="color:#f92672">=</span> Sensor.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  Serial.println(sensorValue);
+}
+</code></pre></div><p>The idea was that when the sensor outputs beyond a certain threshold, a midi note would be sent as output. When the capacitive sensor is below a certain threshold, the midi note is no longer playing. The capacitive sensor has more flexibility and versatility than the button midi circuit I built last week. This is because copper tape capacitive sensoring is not a binary, but is a function of how much resistance I am putting on the tape! Because of this, I could control velocity of my midi output. (note: velocity in the context of MIDI is a synonym to loudness). I also accounted for this in my code. 127 represents the loudest a midi note can be tagged for. 0 is the smallest. My approach was to first test the range of numbers outputted by the capacitive sensor, and wrote in threshold values according to what was reasonable. For the current setup, I decided to use 40000 as the high threshold, 20000 as a medium threshold, and 1000 as a low threshold. These would in turn represent high, low, and medium velocities, respectfully. These numbers were set to variables so that the threshold values can be easily manipulated based on the sensor sensitivity.</p>
+<p><a class="link" href="https://computermusicresource.com/MIDI.Commands.html"  target="_blank" rel="noopener"
+    >MIDI commands</a></p>
+<p>Here is my code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;CapacitiveSensor.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+CapacitiveSensor Sensor <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">5</span>);  <span style="color:#75715e">// 7 is charge pin.  5 is sense pin.
+</span><span style="color:#75715e"></span>byte noteON <span style="color:#f92672">=</span> <span style="color:#ae81ff">144</span>; <span style="color:#75715e">// MIDI command for turning a note on
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">long</span> currentState <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">//stores current state
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">long</span> lastState <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;    <span style="color:#75715e">//stores last state
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>(){
+  Serial.begin(<span style="color:#ae81ff">115200</span>); <span style="color:#75715e">//initialize Serial connection
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>(){
+  <span style="color:#66d9ef">long</span> sensorValue <span style="color:#f92672">=</span> Sensor.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue <span style="color:#f92672">=</span> map(sensorValue, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">300000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  currentState <span style="color:#f92672">=</span> sensorValue;
+  <span style="color:#66d9ef">int</span> high <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>;
+  <span style="color:#66d9ef">int</span> low <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">if</span> (currentState <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState <span style="color:#f92672">==</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">127</span>); <span style="color:#75715e">//turn on note 60 with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">200</span>); <span style="color:#75715e">// debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState <span style="color:#f92672">==</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">0</span>); <span style="color:#75715e">//turn off note 60
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>); <span style="color:#75715e">// debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState <span style="color:#f92672">=</span> currentState;
+}
+</code></pre></div><h4 id="fixing-the-midi-not-saving-issue">Fixing the MIDI not-saving issue</h4>
+<p>The issue was that the serial port was outputting values that were too high. That&rsquo;s why it was outputting junk, as shown below.
+This problem was address by mapping the values to a certain range. By doing so, the values generated by the capacitive sensor are converted to a better, workable range.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">  <span style="color:#66d9ef">long</span> sensorValue <span style="color:#f92672">=</span> Sensor.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue <span style="color:#f92672">=</span> map(sensorValue, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1000000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+</code></pre></div><p>I also made variables for the high and low values in order to abstract some of the code.
+I cleaned up and condensed the code as well.</p>
+<p>Here is the rest of it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">
+byte noteON <span style="color:#f92672">=</span> <span style="color:#ae81ff">144</span>;<span style="color:#75715e">//note on command
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">long</span> currentState <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;<span style="color:#75715e">//storage for current state
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">long</span> lastState <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;<span style="color:#75715e">//storage for last state
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>(){
+  Serial.begin(<span style="color:#ae81ff">115200</span>);<span style="color:#75715e">//initialize Serial connection
+</span><span style="color:#75715e"></span>}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>(){
+  <span style="color:#66d9ef">long</span> sensorValue <span style="color:#f92672">=</span> Sensor.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue <span style="color:#f92672">=</span> map(sensorValue, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1000000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#75715e">//map sensor value and go into trackable 
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// put a plateau on a value/upper threshold
+</span><span style="color:#75715e"></span>
+  currentState <span style="color:#f92672">=</span> sensorValue;
+  <span style="color:#66d9ef">int</span> high <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>;
+  <span style="color:#66d9ef">int</span> low <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">if</span> (currentState <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState <span style="color:#f92672">==</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">127</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">200</span>); <span style="color:#75715e">// debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState <span style="color:#f92672">==</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">// debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState <span style="color:#f92672">=</span> currentState;
+
+<span style="color:#75715e">//  Serial.println(sensorValue); // Debugging
+</span><span style="color:#75715e">//  Serial.println(currentState);
+</span><span style="color:#75715e"></span>}
+<span style="color:#75715e">//send MIDI message
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">MIDImessage</span>(byte command, byte data1, byte data2) {
+  Serial.write(command);
+  Serial.write(data1);
+  Serial.write(data2);
+}
+</code></pre></div><p>This is the functional capacitive touch (using copper tape) midi control!
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe loading="lazy" src="https://www.youtube.com/embed/-aQzK6Gf9UI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</p>
+<p>I have now gotten a button and a single square of copper tape to both transmit MIDI data to my DAW. Now, I need to expand this to multiple inputs, i.e. 12 pieces of copper tape. Each sensor should correspond to a specific note on the Western chormatic scale. In order to do this, I not only need to add more sensors to the circuit, but I need to modify the code so that it can send multiple instances of MIDI data.</p>
+<h2 id="part-31-circuitry">Part 3.1: Circuitry</h2>
+<p>I knew I needed a lot of wiring to accomodate for 13 sensors, so I kept organized by first prototyping the circuit in TinkerCAD.
+<figure style="flex-grow: 135; flex-basis: 325px">
+		<a href="/ps70/posts/finalproject/circuit.png" data-size="1376x1016"><img src="/ps70/posts/finalproject/circuit.png"
+				srcset="/ps70/posts/finalproject/circuit_hue1edbd4f61963265d30b84a429594210_349755_480x0_resize_box_2.png 480w, /ps70/posts/finalproject/circuit_hue1edbd4f61963265d30b84a429594210_349755_1024x0_resize_box_2.png 1024w"
+				width="1376"
+				height="1016"
+				loading="lazy"
+				alt="Protyping in TinkerCAD">
+		</a>
+		
+		<figcaption>Protyping in TinkerCAD</figcaption>
+		
+	</figure></p>
+<p>I used 10 47k ohm resistors and 3 100k ohm resistors, due to limited supplies. Because of the different levels of resistance, I adjusted and accommodated for the difference on the software side, as I&rsquo;ll discuss later.</p>
+<p>Due to the number of wires I was dealing with, it was crucial that I kept my breadboard neat. Though it was time-consuming, I trimmed all jumper wires and resistors in order to sit flatly on the breadboard. Keeping a neat circuit makes it easier to identify possible bugs and to double check connections. This came to be very helpful later during the casing stage as well.</p>
+<p><figure style="flex-grow: 133; flex-basis: 320px">
+		<a href="/ps70/posts/finalproject/resistorcut.jpg" data-size="4032x3024"><img src="/ps70/posts/finalproject/resistorcut.jpg"
+				srcset="/ps70/posts/finalproject/resistorcut_huefa520473b1b7005080189f1939869a4_2629881_480x0_resize_q75_box.jpg 480w, /ps70/posts/finalproject/resistorcut_huefa520473b1b7005080189f1939869a4_2629881_1024x0_resize_q75_box.jpg 1024w"
+				width="4032"
+				height="3024"
+				loading="lazy"
+				alt="Trimming components">
+		</a>
+		
+		<figcaption>Trimming components</figcaption>
+		
+	</figure></p>
+<p>This was the result! The patience was definitely worth it (this took me multiple hours)&hellip;
+<figure style="flex-grow: 133; flex-basis: 320px">
+		<a href="/ps70/posts/finalproject/circuitirl.jpg" data-size="4032x3024"><img src="/ps70/posts/finalproject/circuitirl.jpg"
+				srcset="/ps70/posts/finalproject/circuitirl_hu52603ea3173a47f18c6d0908a871e50a_4495720_480x0_resize_q75_box.jpg 480w, /ps70/posts/finalproject/circuitirl_hu52603ea3173a47f18c6d0908a871e50a_4495720_1024x0_resize_q75_box.jpg 1024w"
+				width="4032"
+				height="3024"
+				loading="lazy"
+				alt="Let&rsquo;s make it!">
+		</a>
+		
+		<figcaption>Let’s make it!</figcaption>
+		
+	</figure></p>
+<h2 id="part-32-multiple-sensors">Part 3.2: Multiple Sensors</h2>
+<p>I first started with two sensors, to see if my code could make sense of it (pun-intended&hellip;).
+I did this by creating another path to a copper tape capacitive touch sensor. The source pin is the same. I first created more parameters to the MIDImessage function, as I thought I could just add more data options there. I had trouble with calibrating the sensors to map it to the right, digestable values at first. It took a lot of trial and error. I used the following functions to print to the serial monitor and calibrate the sensors while distinguishing the two.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"> Serial.print(sensorValue); <span style="color:#75715e">// Debugging
+</span><span style="color:#75715e"></span> Serial.print(<span style="color:#e6db74">&#34; , &#34;</span>);
+ Serial.println(sensorValue2); <span style="color:#75715e">// Debugging
+</span></code></pre></div><p>What this does is it prints the sensor values of my two sensors to the serial monitor in this format:
+sensorVal1, sensorVal2
+where the two entities are longs (aka, a form of integer).</p>
+<p>I played around with the map parameters, as well as adjusted the &ldquo;low&rdquo; and &ldquo;high&rdquo; thresholds. After a couple hours of repeating this process, it seemed to work, so I moved forward with it.
+<figure style="flex-grow: 133; flex-basis: 320px">
+		<a href="/ps70/posts/finalproject/twosense.jpg" data-size="4032x3024"><img src="/ps70/posts/finalproject/twosense.jpg"
+				srcset="/ps70/posts/finalproject/twosense_hu1de0c8752766073088e6409d9f4d73ef_2871582_480x0_resize_q75_box.jpg 480w, /ps70/posts/finalproject/twosense_hu1de0c8752766073088e6409d9f4d73ef_2871582_1024x0_resize_q75_box.jpg 1024w"
+				width="4032"
+				height="3024"
+				loading="lazy"
+				alt="Two sensors">
+		</a>
+		
+		<figcaption>Two sensors</figcaption>
+		
+	</figure></p>
+<p>I started to work on the physical component of the circuit, and expanded to all &ldquo;white&rdquo; keys (natural notes in C major).
+<figure style="flex-grow: 140; flex-basis: 337px">
+		<a href="/ps70/posts/finalproject/whitekeys.jpg" data-size="4032x2865"><img src="/ps70/posts/finalproject/whitekeys.jpg"
+				srcset="/ps70/posts/finalproject/whitekeys_hu1dda6257029fe8b0026f0ace7d4c2a9a_2033100_480x0_resize_q75_box.jpg 480w, /ps70/posts/finalproject/whitekeys_hu1dda6257029fe8b0026f0ace7d4c2a9a_2033100_1024x0_resize_q75_box.jpg 1024w"
+				width="4032"
+				height="2865"
+				loading="lazy"
+				alt="White keys">
+		</a>
+		
+		<figcaption>White keys</figcaption>
+		
+	</figure></p>
+<p>However, I soon realized that as I expanded this code to multiple copper tapes, it would became very repetitive and look messy and inefficient.</p>
+<p>Here was my code for this expanded portion:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;CapacitiveSensor.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+CapacitiveSensor Sensor <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">0</span>);  <span style="color:#75715e">//7 is charge pin.  5 is sense pin.
+</span><span style="color:#75715e"></span>CapacitiveSensor Sensor2 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">1</span>);  
+CapacitiveSensor Sensor3 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">2</span>);  
+CapacitiveSensor Sensor4 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">3</span>);  
+CapacitiveSensor Sensor5 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">4</span>);  
+CapacitiveSensor Sensor6 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">5</span>);  
+CapacitiveSensor Sensor7 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">6</span>); 
+CapacitiveSensor Sensor8 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">7</span>);  
+CapacitiveSensor Sensor9 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">8</span>);  
+CapacitiveSensor Sensor10 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">9</span>); 
+CapacitiveSensor Sensor11 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">10</span>);  
+CapacitiveSensor Sensor12 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">11</span>); 
+CapacitiveSensor Sensor13 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">12</span>);  
+
+byte noteON <span style="color:#f92672">=</span> <span style="color:#ae81ff">144</span>;<span style="color:#75715e">//note on command
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">long</span> currentState <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;<span style="color:#75715e">//stroage for current state
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">long</span> lastState <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;<span style="color:#75715e">//storage for last state
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">long</span> currentState2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState4 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState4 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState5 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState5 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState6 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState6 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState7 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState7 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState8 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState8 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState9 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState9 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState10 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState10 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState11 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState11 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState12 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState12 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState13 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState13 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>(){
+  Serial.begin(<span style="color:#ae81ff">115200</span>);<span style="color:#75715e">//initialize Serial connection
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>(){
+  <span style="color:#66d9ef">long</span> sensorValue <span style="color:#f92672">=</span> Sensor.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue <span style="color:#f92672">=</span> map(sensorValue, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue2 <span style="color:#f92672">=</span> Sensor2.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue2 <span style="color:#f92672">=</span> map(sensorValue2, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue3 <span style="color:#f92672">=</span> Sensor3.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue3 <span style="color:#f92672">=</span> map(sensorValue3, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue4 <span style="color:#f92672">=</span> Sensor4.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue4 <span style="color:#f92672">=</span> map(sensorValue4, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue5 <span style="color:#f92672">=</span> Sensor5.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue5 <span style="color:#f92672">=</span> map(sensorValue5, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue6 <span style="color:#f92672">=</span> Sensor6.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue6 <span style="color:#f92672">=</span> map(sensorValue6, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue7 <span style="color:#f92672">=</span> Sensor7.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue7 <span style="color:#f92672">=</span> map(sensorValue7, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue8 <span style="color:#f92672">=</span> Sensor8.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue8 <span style="color:#f92672">=</span> map(sensorValue8, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+    <span style="color:#66d9ef">long</span> sensorValue9 <span style="color:#f92672">=</span> Sensor9.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue9 <span style="color:#f92672">=</span> map(sensorValue9, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue10 <span style="color:#f92672">=</span> Sensor10.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue10 <span style="color:#f92672">=</span> map(sensorValue10, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+    <span style="color:#66d9ef">long</span> sensorValue11 <span style="color:#f92672">=</span> Sensor11.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue11 <span style="color:#f92672">=</span> map(sensorValue11, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+    <span style="color:#66d9ef">long</span> sensorValue12 <span style="color:#f92672">=</span> Sensor12.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue12 <span style="color:#f92672">=</span> map(sensorValue12, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue13 <span style="color:#f92672">=</span> Sensor13.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue13 <span style="color:#f92672">=</span> map(sensorValue13, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+
+  <span style="color:#75715e">//map sensor value and go into trackable 
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// put a plateau on a value/upper threshold
+</span><span style="color:#75715e"></span>
+  currentState <span style="color:#f92672">=</span> sensorValue;
+  currentState2 <span style="color:#f92672">=</span> sensorValue2;
+  currentState3 <span style="color:#f92672">=</span> sensorValue3;
+  currentState4 <span style="color:#f92672">=</span> sensorValue4;
+    currentState5 <span style="color:#f92672">=</span> sensorValue5;
+  currentState6 <span style="color:#f92672">=</span> sensorValue6;
+  currentState7 <span style="color:#f92672">=</span> sensorValue7;
+    currentState8 <span style="color:#f92672">=</span> sensorValue8;
+  currentState9 <span style="color:#f92672">=</span> sensorValue9;
+  currentState10 <span style="color:#f92672">=</span> sensorValue10;
+      currentState11 <span style="color:#f92672">=</span> sensorValue11;
+  currentState12 <span style="color:#f92672">=</span> sensorValue12;
+  currentState13 <span style="color:#f92672">=</span> sensorValue13;
+  <span style="color:#66d9ef">int</span> high <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>;
+  <span style="color:#66d9ef">int</span> low <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+
+  <span style="color:#66d9ef">if</span> (currentState <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">127</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState <span style="color:#f92672">=</span> currentState;
+  <span style="color:#66d9ef">if</span> (currentState2 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState2 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">61</span>, <span style="color:#ae81ff">127</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState2 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState2 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">61</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState2 <span style="color:#f92672">=</span> currentState2;
+    <span style="color:#66d9ef">if</span> (currentState3<span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState3 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">127</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState3 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState3 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState3 <span style="color:#f92672">=</span> currentState3;
+    <span style="color:#66d9ef">if</span> (currentState4 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState4 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">63</span>, <span style="color:#ae81ff">127</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState4 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState4 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">63</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState4 <span style="color:#f92672">=</span> currentState4;
+  
+      <span style="color:#66d9ef">if</span> (currentState5 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState5 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">127</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState5 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState5 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+    lastState5 <span style="color:#f92672">=</span> currentState5;
+    
+  <span style="color:#66d9ef">if</span> (currentState6 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState6 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">65</span>, <span style="color:#ae81ff">127</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState6 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState6 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">65</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState6 <span style="color:#f92672">=</span> currentState6;
+
+    <span style="color:#66d9ef">if</span> (currentState7 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState7 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">66</span>, <span style="color:#ae81ff">127</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState7 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState7 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">66</span>, <span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState7 <span style="color:#f92672">=</span> currentState7;
+ 
+    <span style="color:#66d9ef">if</span> (currentState8<span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState8 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">127</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState8 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState8 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState8 <span style="color:#f92672">=</span> currentState8;
+    <span style="color:#66d9ef">if</span> (currentState9 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState9 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">68</span>, <span style="color:#ae81ff">127</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState9 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState9 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">68</span>, <span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState9 <span style="color:#f92672">=</span> currentState9;
+
+    <span style="color:#66d9ef">if</span> (currentState10 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState10 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">69</span>, <span style="color:#ae81ff">127</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState10 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState10 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">69</span>, <span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);
+  }
+  lastState10 <span style="color:#f92672">=</span> currentState10;
+
+      <span style="color:#66d9ef">if</span> (currentState11 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState11 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">127</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState11 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState11 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);
+  }
+  lastState11 <span style="color:#f92672">=</span> currentState11;
+
+      <span style="color:#66d9ef">if</span> (currentState12 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState12 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">71</span>, <span style="color:#ae81ff">127</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState12 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState12 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">71</span>, <span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);
+  }
+  lastState12 <span style="color:#f92672">=</span> currentState12;
+
+      <span style="color:#66d9ef">if</span> (currentState13 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState13 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">72</span>, <span style="color:#ae81ff">127</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState13 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState13 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">72</span>, <span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);
+  }
+  lastState13 <span style="color:#f92672">=</span> currentState13;
+}
+<span style="color:#75715e">//send MIDI message
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">MIDImessage</span>(byte command, byte data1, byte data2, byte data3, byte data4, byte data5, byte data6) {
+  Serial.write(command);
+  Serial.write(data1);
+  Serial.write(data2);
+  Serial.write(command);
+  Serial.write(data3);
+  Serial.write(data4);
+  Serial.write(command);
+  Serial.write(data5);
+  Serial.write(data6);
+}
+</code></pre></div><p>I went forward with this code, knowing it could be much better. I needed to still focus on the physical and visual aspect, so that was my next step. However! Don&rsquo;t be alarmed! I made my code MUCH cleaner for the final, which took me some hard thinking, but I&rsquo;m proud of the work!</p>
+<h2 id="part-4-casing">Part 4: Casing</h2>
+<p>When it comes to a product, the visual and aesthetic of it can really make or break people&rsquo;s first impression of it! For my final project, I wanted to case my midi controller in a mini piano-keyboard. I wanted my MIDI keyboard to look very compact and small. I edited files of a synth keyboard from <a class="link" href="https://www.thingiverse.com/thing:2760653"  target="_blank" rel="noopener"
+    >Thingyverse</a>.
+I got rid of the huge letters on the top face, the labels, and smoothed down the back face. I also created a small window on the top face, in case I wanted to fit anything out of the face.</p>
+<p>Here are the <a class="link" href="" >STL files</a>.</p>
+<p><img src="midi.jpg" alt="Assembled 3D model"  />
+<img src="midiside.jpg" alt="Side view"  /></p>
+<h4 id="integrating-with-the-3d-printed-parts">Integrating with the 3D printed parts</h4>
+<p>First, I cut the cardboard to be the same size as the keys.
+Then, I cut the copper tape to 1 inch by 1/4 inch.
+<figure style="flex-grow: 133; flex-basis: 320px">
+		<a href="/ps70/posts/finalproject/25tape.jpg" data-size="4032x3024"><img src="/ps70/posts/finalproject/25tape.jpg"
+				srcset="/ps70/posts/finalproject/25tape_hua55cca6f9c171e1dd9714c908d3b581a_1371871_480x0_resize_q75_box.jpg 480w, /ps70/posts/finalproject/25tape_hua55cca6f9c171e1dd9714c908d3b581a_1371871_1024x0_resize_q75_box.jpg 1024w"
+				width="4032"
+				height="3024"
+				loading="lazy"
+				alt="Construct 25 sensors">
+		</a>
+		
+		<figcaption>Construct 25 sensors</figcaption>
+		
+	</figure></p>
+<p>I then compared to the keys, which will be the case over the copper tape sensors.
+<img src="25key.jpg" alt="MIDI keys interior"  /></p>
+<p>However, as I started to wire together my circuit, I realized that I simply did not have enoough material (or pins!) to hook up 25 keys. This was definitely a big roadblock for me, and a huge lesson learned in how it is important to keep this at the forefront of my planning.</p>
+<h4 id="handmade-pivot">Handmade Pivot!</h4>
+<p>It was difficult given I didn&rsquo;t have much outside resources (except the amazing class package we have, which is honestly more than enough!), but I made do with cardboard and a plastic bin.</p>
+<p>My white keys were 20 mm in width and 2 inches in height. My copper tape pieces were 1 inch long, and 1/4 inch wide. These were the measurements I made prior to building my instrument. I was careful to minimize any discreepancies between the keys, as I knew that the capacitive touch sensors were&hellip; sensitive..,. and that small differences could make a big issue.</p>
+<p>Since a huge goal of my final project was to create a portable instrument, it was important to keep the casing minimal! I really like the way this turned out. The cardboard is even more lightweight than the 3D printed plastic. It lies right flat on the ground and is very thin, which makes it extremely portable. All in all, it still served its function and original aesthetic very well. I like how it looks &ldquo;indie&rdquo;, too.</p>
+<p>I used a plastic bin for both support and for a casing. I taped my wires to the sides and on the inside of the bin in order to conceal the majority of the circuit, for a more minimalistic and less overwhelming look. The bin&rsquo;s height also adds a nice dimension &ndash; sort of like a laptop stand, but for my midi keyboard.</p>
+<p>Here is the outside of my midi keyboard
+<img src="uppercase.jpg" alt="Outside view"  /></p>
+<p>And here is the inside!
+<figure style="flex-grow: 149; flex-basis: 359px">
+		<a href="/ps70/posts/finalproject/undercase.jpg" data-size="4032x2691"><img src="/ps70/posts/finalproject/undercase.jpg"
+				srcset="/ps70/posts/finalproject/undercase_huc2d3f22e1e750d6e10dfb241cbad8f21_2238928_480x0_resize_q75_box.jpg 480w, /ps70/posts/finalproject/undercase_huc2d3f22e1e750d6e10dfb241cbad8f21_2238928_1024x0_resize_q75_box.jpg 1024w"
+				width="4032"
+				height="2691"
+				loading="lazy"
+				alt="Inside the casing">
+		</a>
+		
+		<figcaption>Inside the casing</figcaption>
+		
+	</figure></p>
+<h2 id="part-5-cleaning-up-my-code">Part 5: Cleaning up my code</h2>
+<p>I was able to wrap a lot of my previous code into for loops, by creating arrays for the current/last state, sensorvalue variables. Here is the clean version:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;CapacitiveSensor.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+CapacitiveSensor Sensor <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">0</span>);  <span style="color:#75715e">//13 is charge pin.  0 is sense pin.
+</span><span style="color:#75715e"></span>CapacitiveSensor Sensor2 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">1</span>);  
+CapacitiveSensor Sensor3 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">2</span>);  
+CapacitiveSensor Sensor4 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">3</span>);  
+CapacitiveSensor Sensor5 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">4</span>);  
+CapacitiveSensor Sensor6 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">5</span>);  
+CapacitiveSensor Sensor7 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">6</span>); 
+CapacitiveSensor Sensor8 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">7</span>);  
+CapacitiveSensor Sensor9 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">8</span>);  
+CapacitiveSensor Sensor10 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">9</span>); 
+CapacitiveSensor Sensor11 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">10</span>);  
+CapacitiveSensor Sensor12 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">11</span>); 
+CapacitiveSensor Sensor13 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">12</span>);  
+
+<span style="color:#75715e">//note on MIDI command
+</span><span style="color:#75715e"></span>byte noteON[<span style="color:#ae81ff">13</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">144</span>, <span style="color:#ae81ff">145</span>, <span style="color:#ae81ff">146</span>, <span style="color:#ae81ff">147</span>, <span style="color:#ae81ff">148</span>, <span style="color:#ae81ff">149</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">151</span>, <span style="color:#ae81ff">152</span>, <span style="color:#ae81ff">153</span>, <span style="color:#ae81ff">154</span>, <span style="color:#ae81ff">155</span>, <span style="color:#ae81ff">156</span>}; 
+<span style="color:#75715e">//byte noteON[13] = {144, 144, 144, 144, 144, 144, 144, 144, 144, 144, 144, 144, 144}; 
+</span><span style="color:#75715e"></span>byte tones[<span style="color:#ae81ff">13</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">61</span>, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">63</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">65</span>, <span style="color:#ae81ff">66</span>, <span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">68</span>, <span style="color:#ae81ff">69</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">71</span>, <span style="color:#ae81ff">72</span>};
+
+<span style="color:#75715e">// stores current state
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">long</span> currentStates[<span style="color:#ae81ff">13</span>] <span style="color:#f92672">=</span> {
+  <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>
+};
+
+<span style="color:#75715e">// stores previous state
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">long</span> lastStates[<span style="color:#ae81ff">13</span>] <span style="color:#f92672">=</span>{
+  <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>
+};
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>(){
+  Serial.begin(<span style="color:#ae81ff">115200</span>);<span style="color:#75715e">//initialize Serial connection
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>(){
+  
+  <span style="color:#75715e">// put the sensor values into an array
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">long</span> sensorValues[<span style="color:#ae81ff">13</span>] <span style="color:#f92672">=</span> {
+    Sensor.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor2.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor3.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor4.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor5.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor6.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor7.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor8.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor9.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor10.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor11.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor12.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor13.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+   };
+  
+  <span style="color:#75715e">// map sensor value and go into a trackable rangee
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// put a plateau on a value/upper threshold
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// for sensors 1 to 10
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; i<span style="color:#f92672">++</span>) {
+    sensorValues[i] <span style="color:#f92672">=</span> map(sensorValues[i], <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  }
+  <span style="color:#75715e">// for sensors 11 to 13 (used different resistor)
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">13</span>; i<span style="color:#f92672">++</span>) {
+    sensorValues[i] <span style="color:#f92672">=</span> map(sensorValues[i], <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  }
+
+  <span style="color:#75715e">// set current state of a sensor to be its sensor value
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">13</span>; i<span style="color:#f92672">++</span>){
+    currentStates[i] <span style="color:#f92672">=</span> sensorValues[i];
+  }
+
+  <span style="color:#66d9ef">int</span> high <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;       <span style="color:#75715e">// capacitive calibration
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> low <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+
+  <span style="color:#75715e">// on or off midi message for each sensor
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">13</span>; i<span style="color:#f92672">++</span>){
+    <span style="color:#66d9ef">if</span> (currentStates[i] <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastStates[i] <span style="color:#f92672">&lt;</span> low){
+      MIDImessage(noteON[i], tones[i], <span style="color:#ae81ff">127</span>); <span style="color:#75715e">// turn respective tone on with 127 velocity, in respective channel
+</span><span style="color:#75715e"></span>      delay(<span style="color:#ae81ff">200</span>); <span style="color:#75715e">// debouncing
+</span><span style="color:#75715e"></span>    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentStates[i] <span style="color:#f92672">&lt;=</span> high <span style="color:#f92672">&amp;&amp;</span> lastStates[i] <span style="color:#f92672">&lt;</span> low){
+      MIDImessage(noteON[i], tones[i], <span style="color:#ae81ff">0</span>); <span style="color:#75715e">//turn note off
+</span><span style="color:#75715e"></span>      delay(<span style="color:#ae81ff">10</span>); <span style="color:#75715e">// debouncing
+</span><span style="color:#75715e"></span>    }
+   lastStates[i] <span style="color:#f92672">=</span> currentStates[i];
+  }
+}
+
+<span style="color:#75715e">//send MIDI message
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">MIDImessage</span>(byte command, byte data1, byte data2) {
+  Serial.write(command);
+  Serial.write(data1);
+  Serial.write(data2);
+}
+</code></pre></div><p>I also made an array for all of the different tones of the chromatic scale, as well as differenet midi channels. Throughout all of this, I kept having to re-calibrate my keys!</p>
+<h2 id="part-6-adding-the-octave-shift">Part 6: Adding the octave-shift</h2>
+<p>My last touch was to add a push button to control the octave shift! I used a separate breadboard for this, as it was small and the original one was too crowded. I created a simple push button circuit with a 10k ohm resistor, and fed it into analog A1 pin (that I used as a digital pin!). The code for this was seemigly simple, as I would create an if statement that shifts up the played tone by +12 (one octave above in midi data). However, it was difficult to get this to work properly, as the ordering within the for loops and the checks were not always where it needed to be.</p>
+<p>Here is how it works:</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe loading="lazy" src="https://www.youtube.com/embed/WLbQIn0KQCQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>I put this button into a separate casing made of cardboard, as it is an optional function! It connected to the main circuit through alligator wires.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">
+<span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;CapacitiveSensor.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> buttonPin <span style="color:#f92672">=</span> A1;
+
+CapacitiveSensor Sensor <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">0</span>);  <span style="color:#75715e">//13 is charge pin.  0 is sense pin.
+</span><span style="color:#75715e"></span>CapacitiveSensor Sensor2 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">1</span>);  
+CapacitiveSensor Sensor3 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">2</span>);  
+CapacitiveSensor Sensor4 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">3</span>);  
+CapacitiveSensor Sensor5 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">4</span>);  
+CapacitiveSensor Sensor6 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">5</span>);  
+CapacitiveSensor Sensor7 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">6</span>); 
+CapacitiveSensor Sensor8 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">7</span>);  
+CapacitiveSensor Sensor9 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">8</span>);  
+CapacitiveSensor Sensor10 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">9</span>); 
+CapacitiveSensor Sensor11 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">10</span>);  
+CapacitiveSensor Sensor12 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">11</span>); 
+CapacitiveSensor Sensor13 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">12</span>);  
+
+<span style="color:#75715e">//note on MIDI command
+</span><span style="color:#75715e"></span>byte noteON[<span style="color:#ae81ff">13</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">144</span>, <span style="color:#ae81ff">145</span>, <span style="color:#ae81ff">146</span>, <span style="color:#ae81ff">147</span>, <span style="color:#ae81ff">148</span>, <span style="color:#ae81ff">149</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">151</span>, <span style="color:#ae81ff">152</span>, <span style="color:#ae81ff">153</span>, <span style="color:#ae81ff">154</span>, <span style="color:#ae81ff">155</span>, <span style="color:#ae81ff">156</span>}; 
+<span style="color:#75715e">//byte noteON[13] = {144, 144, 144, 144, 144, 144, 144, 144, 144, 144, 144, 144, 144}; 
+</span><span style="color:#75715e"></span>byte tones[<span style="color:#ae81ff">13</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">61</span>, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">63</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">65</span>, <span style="color:#ae81ff">66</span>, <span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">68</span>, <span style="color:#ae81ff">69</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">71</span>, <span style="color:#ae81ff">72</span>};
+
+<span style="color:#75715e">// stores current state
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">long</span> currentStates[<span style="color:#ae81ff">13</span>] <span style="color:#f92672">=</span> {
+  <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>
+};
+
+<span style="color:#75715e">// stores previous state
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">long</span> lastStates[<span style="color:#ae81ff">13</span>] <span style="color:#f92672">=</span>{
+  <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>
+};
+
+<span style="color:#66d9ef">int</span> buttonState <span style="color:#f92672">=</span> LOW;
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>(){
+  pinMode(buttonPin, INPUT);
+  Serial.begin(<span style="color:#ae81ff">115200</span>);<span style="color:#75715e">//initialize Serial connection
+</span><span style="color:#75715e"></span>  
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>(){
+  
+  <span style="color:#75715e">// put the sensor values into an array
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">long</span> sensorValues[<span style="color:#ae81ff">13</span>] <span style="color:#f92672">=</span> {
+    Sensor.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor2.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor3.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor4.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor5.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor6.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor7.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor8.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor9.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor10.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor11.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor12.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+    Sensor13.capacitiveSensor(<span style="color:#ae81ff">1000</span>),
+   };
+  
+  <span style="color:#75715e">// map sensor value and go into a trackable rangee
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// put a plateau on a value/upper threshold
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// for sensors 1 to 10
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; i<span style="color:#f92672">++</span>) {
+    sensorValues[i] <span style="color:#f92672">=</span> map(sensorValues[i], <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  }
+  <span style="color:#75715e">// for sensors 11 to 13 (used different resistor)
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">13</span>; i<span style="color:#f92672">++</span>) {
+    sensorValues[i] <span style="color:#f92672">=</span> map(sensorValues[i], <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  }
+  
+  <span style="color:#75715e">// set current state of a sensor to be its sensor value
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">13</span>; i<span style="color:#f92672">++</span>){
+    currentStates[i] <span style="color:#f92672">=</span> sensorValues[i];
+  }
+
+  <span style="color:#66d9ef">int</span> high <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;       <span style="color:#75715e">// capacitive calibration
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> low <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#75715e">//  buttonState = digitalRead(buttonPin);
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// on or off midi message for each sensor
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">13</span>; i<span style="color:#f92672">++</span>){
+    <span style="color:#66d9ef">if</span> (currentStates[i] <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastStates[i] <span style="color:#f92672">&lt;</span> low){
+      <span style="color:#66d9ef">if</span> (digitalRead(buttonPin) <span style="color:#f92672">==</span> HIGH){
+         MIDImessage(noteON[i], tones[i]<span style="color:#f92672">+</span><span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">127</span>); <span style="color:#75715e">// turn respective tone on with 127 velocity, in respective channel
+</span><span style="color:#75715e"></span>      }
+      <span style="color:#66d9ef">else</span>{
+        MIDImessage(noteON[i], tones[i], <span style="color:#ae81ff">127</span>); <span style="color:#75715e">// turn respective tone on with 127 velocity, in respective channel
+</span><span style="color:#75715e"></span>      
+      }
+     delay(<span style="color:#ae81ff">200</span>); <span style="color:#75715e">// debouncing
+</span><span style="color:#75715e"></span>    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentStates[i] <span style="color:#f92672">&lt;=</span> high <span style="color:#f92672">&amp;&amp;</span> lastStates[i] <span style="color:#f92672">&lt;</span> low){
+      MIDImessage(noteON[i], tones[i], <span style="color:#ae81ff">0</span>); <span style="color:#75715e">//turn note off
+</span><span style="color:#75715e"></span>      delay(<span style="color:#ae81ff">10</span>); <span style="color:#75715e">// debouncing
+</span><span style="color:#75715e"></span>    }
+   lastStates[i] <span style="color:#f92672">=</span> currentStates[i];
+  }
+}
+
+<span style="color:#75715e">//send MIDI message
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">MIDImessage</span>(byte command, byte data1, byte data2) {
+  Serial.write(command);
+  Serial.write(data1);
+  Serial.write(data2);
+}
+</code></pre></div><h2 id="limitations">Limitations</h2>
+<p>I went over some limitations, but here are some of them listed:</p>
+<ul>
+<li>Not enough digital inputs on the microcontroller.</li>
+<li>Ran out of resistors of the same ohm resistance.</li>
+</ul>
+<h2 id="next-steps">Next steps</h2>
+<p>Check out some of my other ideas on my WIP page!</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+    
+</article>
+
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 JuHye Mun
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.0.1">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ps70/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

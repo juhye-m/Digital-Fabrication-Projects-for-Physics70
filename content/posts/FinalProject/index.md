@@ -697,10 +697,10 @@ Since a huge goal of my final project was to create a portable instrument, it wa
 I used a plastic bin for both support and for a casing. I taped my wires to the sides and on the inside of the bin in order to conceal the majority of the circuit, for a more minimalistic and less overwhelming look. The bin's height also adds a nice dimension -- sort of like a laptop stand, but for my midi keyboard.
 
 Here is the outside of my midi keyboard
-![Outside view](uppercase.jpg)
+![Outside view](uppercase1.jpg)
 
 And here is the inside!
-![Inside the casing](undercase1.jpg)
+![Inside the casing](undercase.jpg)
 
 ## Part 5: Cleaning up my code
 

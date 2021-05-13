@@ -289,7 +289,7 @@ For my code, I used the MIDImessage Arduino function. It takes as parameters (no
 I wrote custom code to measure capacitive touch and turn that data into midi data to use in a DAW! 
 First, I set up my circuit like so (this is something we went over in earlier weeks):
 
-![Capacitive sensor](capactive.jpg)
+![Capacitive sensor](capacitive.jpg)
 
 I used the Arduino CapacitiveSensor library.
 ```cpp

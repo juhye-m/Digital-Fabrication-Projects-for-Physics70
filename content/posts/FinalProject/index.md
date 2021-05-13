@@ -680,7 +680,7 @@ Then, I cut the copper tape to 1 inch by 1/4 inch.
 ![Construct 25 sensors](25tape.jpg)
 
 I then compared to the keys, which will be the case over the copper tape sensors.
-![MIDI keys interior](25key.jpg)
+![MIDI keys interior](25keys.jpg)
 
 However, as I started to wire together my circuit, I realized that I simply did not have enoough material (or pins!) to hook up 25 keys. This was definitely a big roadblock for me, and a huge lesson learned in how it is important to keep this at the forefront of my planning. 
 

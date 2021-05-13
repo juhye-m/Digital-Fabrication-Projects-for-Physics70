@@ -700,7 +700,7 @@ Here is the outside of my midi keyboard
 ![Outside view](uppercase.jpg)
 
 And here is the inside!
-![Inside the casing](undercase.jpg)
+![Inside the casing](undercase1.jpg)
 
 ## Part 5: Cleaning up my code
 

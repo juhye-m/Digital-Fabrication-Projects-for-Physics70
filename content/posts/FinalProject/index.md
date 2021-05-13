@@ -428,6 +428,9 @@ where the two entities are longs (aka, a form of integer).
  I played around with the map parameters, as well as adjusted the "low" and "high" thresholds. After a couple hours of repeating this process, it seemed to work, so I moved forward with it. 
 ![Two sensors](twosense.jpg)
 
+{{< youtube id="-vKKabWJ-9I" title="Two Sensors" >}}
+
+
 I started to work on the physical component of the circuit, and expanded to all "white" keys (natural notes in C major).
 ![White keys](whitekeys.jpg)
 
@@ -686,6 +689,9 @@ It was difficult given I didn't have much outside resources (except the amazing 
 
 My white keys were 20 mm in width and 2 inches in height. My copper tape pieces were 1 inch long, and 1/4 inch wide. These were the measurements I made prior to building my instrument. I was careful to minimize any discreepancies between the keys, as I knew that the capacitive touch sensors were... sensitive..,. and that small differences could make a big issue. 
 
+Using the capacitive testing from above, I expanded to this one-octave cardboard keyboard and here is my progress:
+{{< youtube id="ls_W1WYdk0" title="Chromatic scale works" >}}
+
 Since a huge goal of my final project was to create a portable instrument, it was important to keep the casing minimal! I really like the way this turned out. The cardboard is even more lightweight than the 3D printed plastic. It lies right flat on the ground and is very thin, which makes it extremely portable. All in all, it still served its function and original aesthetic very well. I like how it looks "indie", too. 
 
 I used a plastic bin for both support and for a casing. I taped my wires to the sides and on the inside of the bin in order to conceal the majority of the circuit, for a more minimalistic and less overwhelming look. The bin's height also adds a nice dimension -- sort of like a laptop stand, but for my midi keyboard.
@@ -803,7 +809,7 @@ My last touch was to add a push button to control the octave shift! I used a sep
 
 Here is how it works:
 
-{{< youtube id="WLbQIn0KQCQ" title="Mini MIDI: PS70 Final Project" >}}
+{{< youtube id="WLbQIn0KQCQ" title="Push Button" >}}
 
 
 I put this button into a separate casing made of cardboard, as it is an optional function! It connected to the main circuit through alligator wires.

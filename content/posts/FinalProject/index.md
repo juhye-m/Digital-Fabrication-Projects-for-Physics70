@@ -922,6 +922,10 @@ void MIDImessage(byte command, byte data1, byte data2) {
 }
 ```
 
+## Okay, final touches for real.
+
+I drew! Made it cute! See the final video. :)
+
 ## Limitations
 I went over some limitations, but here are some of them listed:
 - Not enough digital inputs on the microcontroller.

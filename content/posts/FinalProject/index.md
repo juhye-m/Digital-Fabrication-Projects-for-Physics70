@@ -11,8 +11,8 @@ draft: false
 Description: A lightweight MIDI virtual instrument made from scratch (with an microcontroller~).
 Weight: 12 oz. Height x Width: 4.0 inch x 8.0 inch. With casing: 6.0 inch x 8.0 inch
 
-Final version of my code.
-All versions of my code.
+[Final version of my code](https://github.com/juhye-m/ps70-code/blob/master/code/addbutton.ino).
+[All versions of my code](https://github.com/juhye-m/ps70-code/tree/master/code).
 
 ## Why a MIDI keyboard? 
 

@@ -582,7 +582,268 @@ CapacitiveSensor Sensor <span style="color:#f92672">=</span> CapacitiveSensor(<s
 <li>TCP display to display octave change.</li>
 <li>On/Off switchs</li>
 </ul>
+<h2 id="may-11-update">May 11 update</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">// global assignments
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> c <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; 
+  <span style="color:#66d9ef">int</span> d <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; 
+  <span style="color:#66d9ef">int</span> e <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+  <span style="color:#66d9ef">int</span> f <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+  <span style="color:#66d9ef">int</span> g <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;
+  <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+  <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;
+  
+<span style="color:#75715e">// example: getnoteValue(c, false, 0); returns 60, which is C4
+</span><span style="color:#75715e">// this function gets midi value of a note (where note is a number from 0-6 that represents white keys)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getNoteValue</span>(<span style="color:#66d9ef">int</span> note, <span style="color:#66d9ef">bool</span> sharp <span style="color:#f92672">=</span> false, <span style="color:#66d9ef">int</span> octave <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>) { <span style="color:#75715e">// optional parameters. -1 is lower, 1 is upper
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> tones[] <span style="color:#f92672">=</span> { <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">65</span>, <span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">69</span>, <span style="color:#ae81ff">71</span> }; <span style="color:#75715e">// natural notes in C4  
+</span><span style="color:#75715e"></span>  
+  <span style="color:#66d9ef">int</span> midiVal <span style="color:#f92672">=</span> tones[note]; <span style="color:#75715e">// default
+</span><span style="color:#75715e"></span>  
+  <span style="color:#75715e">// run modifications as needed
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (sharp) {
+    midiVal<span style="color:#f92672">++</span>;
+  }
+  <span style="color:#66d9ef">if</span> (octave <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
+    midiVal <span style="color:#f92672">+=</span> <span style="color:#ae81ff">12</span>;
+  }
+  <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (octave <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
+    midiVal <span style="color:#f92672">-=</span> <span style="color:#ae81ff">12</span>;
+  }
+  <span style="color:#66d9ef">return</span> midiVal; 
+}
+</code></pre></div><p>Multiple inputs:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;CapacitiveSensor.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+CapacitiveSensor Sensor <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">0</span>);  <span style="color:#75715e">//7 is charge pin.  5 is sense pin.
+</span><span style="color:#75715e"></span>CapacitiveSensor Sensor2 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">1</span>);  
+CapacitiveSensor Sensor3 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">2</span>);  
+CapacitiveSensor Sensor4 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">3</span>);  
+CapacitiveSensor Sensor5 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">4</span>);  
+CapacitiveSensor Sensor6 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">5</span>);  
+CapacitiveSensor Sensor7 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">6</span>); 
+CapacitiveSensor Sensor8 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">7</span>);  
+CapacitiveSensor Sensor9 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">8</span>);  
+CapacitiveSensor Sensor10 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">9</span>); 
+CapacitiveSensor Sensor11 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">10</span>);  
+CapacitiveSensor Sensor12 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">11</span>); 
+CapacitiveSensor Sensor13 <span style="color:#f92672">=</span> CapacitiveSensor(<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">12</span>);  
 
+byte noteON <span style="color:#f92672">=</span> <span style="color:#ae81ff">144</span>;<span style="color:#75715e">//note on command
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">long</span> currentState <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;<span style="color:#75715e">//stroage for current state
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">long</span> lastState <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;<span style="color:#75715e">//storage for last state
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">long</span> currentState2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState4 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState4 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState5 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState5 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState6 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState6 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState7 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState7 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState8 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState8 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState9 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState9 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState10 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState10 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState11 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState11 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState12 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState12 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> currentState13 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">long</span> lastState13 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>(){
+  Serial.begin(<span style="color:#ae81ff">115200</span>);<span style="color:#75715e">//initialize Serial connection
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>(){
+  <span style="color:#66d9ef">long</span> sensorValue <span style="color:#f92672">=</span> Sensor.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue <span style="color:#f92672">=</span> map(sensorValue, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue2 <span style="color:#f92672">=</span> Sensor2.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue2 <span style="color:#f92672">=</span> map(sensorValue2, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue3 <span style="color:#f92672">=</span> Sensor3.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue3 <span style="color:#f92672">=</span> map(sensorValue3, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue4 <span style="color:#f92672">=</span> Sensor4.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue4 <span style="color:#f92672">=</span> map(sensorValue4, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue5 <span style="color:#f92672">=</span> Sensor5.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue5 <span style="color:#f92672">=</span> map(sensorValue5, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue6 <span style="color:#f92672">=</span> Sensor6.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue6 <span style="color:#f92672">=</span> map(sensorValue6, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue7 <span style="color:#f92672">=</span> Sensor7.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue7 <span style="color:#f92672">=</span> map(sensorValue7, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue8 <span style="color:#f92672">=</span> Sensor8.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue8 <span style="color:#f92672">=</span> map(sensorValue8, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+    <span style="color:#66d9ef">long</span> sensorValue9 <span style="color:#f92672">=</span> Sensor9.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue9 <span style="color:#f92672">=</span> map(sensorValue9, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue10 <span style="color:#f92672">=</span> Sensor10.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue10 <span style="color:#f92672">=</span> map(sensorValue10, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+    <span style="color:#66d9ef">long</span> sensorValue11 <span style="color:#f92672">=</span> Sensor11.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue11 <span style="color:#f92672">=</span> map(sensorValue11, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+    <span style="color:#66d9ef">long</span> sensorValue12 <span style="color:#f92672">=</span> Sensor12.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue12 <span style="color:#f92672">=</span> map(sensorValue12, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+  <span style="color:#66d9ef">long</span> sensorValue13 <span style="color:#f92672">=</span> Sensor13.capacitiveSensor(<span style="color:#ae81ff">1000</span>);
+  sensorValue13 <span style="color:#f92672">=</span> map(sensorValue13, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>);
+
+  <span style="color:#75715e">//map sensor value and go into trackable 
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// put a plateau on a value/upper threshold
+</span><span style="color:#75715e"></span>
+  currentState <span style="color:#f92672">=</span> sensorValue;
+  currentState2 <span style="color:#f92672">=</span> sensorValue2;
+  currentState3 <span style="color:#f92672">=</span> sensorValue3;
+  currentState4 <span style="color:#f92672">=</span> sensorValue4;
+    currentState5 <span style="color:#f92672">=</span> sensorValue5;
+  currentState6 <span style="color:#f92672">=</span> sensorValue6;
+  currentState7 <span style="color:#f92672">=</span> sensorValue7;
+    currentState8 <span style="color:#f92672">=</span> sensorValue8;
+  currentState9 <span style="color:#f92672">=</span> sensorValue9;
+  currentState10 <span style="color:#f92672">=</span> sensorValue10;
+      currentState11 <span style="color:#f92672">=</span> sensorValue11;
+  currentState12 <span style="color:#f92672">=</span> sensorValue12;
+  currentState13 <span style="color:#f92672">=</span> sensorValue13;
+  <span style="color:#66d9ef">int</span> high <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>;
+  <span style="color:#66d9ef">int</span> low <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+
+  <span style="color:#66d9ef">if</span> (currentState <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">127</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState <span style="color:#f92672">=</span> currentState;
+  <span style="color:#66d9ef">if</span> (currentState2 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState2 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">61</span>, <span style="color:#ae81ff">127</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState2 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState2 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">61</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState2 <span style="color:#f92672">=</span> currentState2;
+    <span style="color:#66d9ef">if</span> (currentState3<span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState3 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">127</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState3 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState3 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState3 <span style="color:#f92672">=</span> currentState3;
+    <span style="color:#66d9ef">if</span> (currentState4 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState4 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">63</span>, <span style="color:#ae81ff">127</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState4 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState4 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">63</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState4 <span style="color:#f92672">=</span> currentState4;
+  
+      <span style="color:#66d9ef">if</span> (currentState5 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState5 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">127</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState5 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState5 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+    lastState5 <span style="color:#f92672">=</span> currentState5;
+    
+  <span style="color:#66d9ef">if</span> (currentState6 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState6 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">65</span>, <span style="color:#ae81ff">127</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState6 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState6 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">65</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState6 <span style="color:#f92672">=</span> currentState6;
+
+    <span style="color:#66d9ef">if</span> (currentState7 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState7 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">66</span>, <span style="color:#ae81ff">127</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState7 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState7 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">66</span>, <span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState7 <span style="color:#f92672">=</span> currentState7;
+ 
+    <span style="color:#66d9ef">if</span> (currentState8<span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState8 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">127</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState8 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState8 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState8 <span style="color:#f92672">=</span> currentState8;
+    <span style="color:#66d9ef">if</span> (currentState9 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState9 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">68</span>, <span style="color:#ae81ff">127</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState9 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState9 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">68</span>, <span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState9 <span style="color:#f92672">=</span> currentState9;
+
+    <span style="color:#66d9ef">if</span> (currentState10 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState10 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">69</span>, <span style="color:#ae81ff">127</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState10 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState10 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">69</span>, <span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState10 <span style="color:#f92672">=</span> currentState10;
+
+      <span style="color:#66d9ef">if</span> (currentState11 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState11 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">127</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState11 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState11 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState11 <span style="color:#f92672">=</span> currentState11;
+
+      <span style="color:#66d9ef">if</span> (currentState12 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState12 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">71</span>, <span style="color:#ae81ff">127</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState12 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState12 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">71</span>, <span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState12 <span style="color:#f92672">=</span> currentState12;
+
+      <span style="color:#66d9ef">if</span> (currentState13 <span style="color:#f92672">&gt;</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState13 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">72</span>, <span style="color:#ae81ff">127</span>);<span style="color:#75715e">//turn note 60 on with 127 velocity
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(currentState13 <span style="color:#f92672">&lt;=</span> high  <span style="color:#f92672">&amp;&amp;</span> lastState13 <span style="color:#f92672">&lt;</span> low){
+    MIDImessage(noteON, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">72</span>, <span style="color:#ae81ff">0</span>);<span style="color:#75715e">//turn note 60 off
+</span><span style="color:#75715e"></span>    delay(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">//crude form of button debouncing
+</span><span style="color:#75715e"></span>  }
+  lastState13 <span style="color:#f92672">=</span> currentState13;
+
+  <span style="color:#75715e">// could use for loop
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//  Serial.println(sensorValue); // Debugging
+</span><span style="color:#75715e">//  Serial.print(&#34; , &#34;);
+</span><span style="color:#75715e">//    Serial.println(sensorValue11); // Debugging
+</span><span style="color:#75715e">//  Serial.println(sensorValue2); // Debugging
+</span><span style="color:#75715e">////  Serial.println(currentState);
+</span><span style="color:#75715e"></span>
+}
+<span style="color:#75715e">//send MIDI message
+</span><span style="color:#75715e">//void MIDImessage(byte command, byte data1, byte data2, byte data3, byte data4, byte data5, byte data6) {
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">MIDImessage</span>(byte command, byte data1, byte data2, byte data3, byte data4, byte data5, byte data6) {
+  Serial.write(command);
+  Serial.write(data1);
+  Serial.write(data2);
+  Serial.write(command);
+  Serial.write(data3);
+  Serial.write(data4);
+  Serial.write(command);
+  Serial.write(data5);
+  Serial.write(data6);
+}
+</code></pre></div>
 </section>
 
 

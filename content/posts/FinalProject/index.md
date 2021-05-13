@@ -6,7 +6,7 @@ draft: false
 
 # JuHye's Final Project: Portable MIDI Keyboard Controller
 
-{{< youtube id="F2uazovZQ1Y title="Mini MIDI: PS70 Final Project" >}}
+{{< youtube id="F2uazovZQ1Y" title="Mini MIDI: PS70 Final Project" >}}
 
 Description: A lightweight MIDI virtual instrument made from scratch (with an microcontroller~).
 Weight: 12 oz. Height x Width: 4.0 inch x 8.0 inch. With casing: 6.0 inch x 8.0 inch
@@ -799,7 +799,15 @@ I also made an array for all of the different tones of the chromatic scale, as w
 
 ## Part 6: Adding the octave-shift
 
-My last touch was to add a push button to control the octave shift! I used a separate breadboard for this, as it was small and the original one was too crowded. I created a simple push button circuit with a 10k ohm resistor, and fed it into analog A1 pin (that I used as a digital pin!).
+My last touch was to add a push button to control the octave shift! I used a separate breadboard for this, as it was small and the original one was too crowded. I created a simple push button circuit with a 10k ohm resistor, and fed it into analog A1 pin (that I used as a digital pin!). The code for this was seemigly simple, as I would create an if statement that shifts up the played tone by +12 (one octave above in midi data). However, it was difficult to get this to work properly, as the ordering within the for loops and the checks were not always where it needed to be. 
+
+Here is how it works:
+
+{{< youtube id="WLbQIn0KQCQ" title="Mini MIDI: PS70 Final Project" >}}
+
+
+I put this button into a separate casing made of cardboard, as it is an optional function! It connected to the main circuit through alligator wires.
+
 ```cpp
 
 #include <CapacitiveSensor.h>
@@ -886,7 +894,6 @@ void loop(){
     if (currentStates[i] > high  && lastStates[i] < low){
       if (digitalRead(buttonPin) == HIGH){
          MIDImessage(noteON[i], tones[i]+12, 127); // turn respective tone on with 127 velocity, in respective channel
-//         delay(200); // debouncing
       }
       else{
         MIDImessage(noteON[i], tones[i], 127); // turn respective tone on with 127 velocity, in respective channel
@@ -899,11 +906,6 @@ void loop(){
     }
    lastStates[i] = currentStates[i];
   }
-
-//  Serial.println(sensorValue); // Debugging
-//  Serial.print(" , ");
-//  Serial.println(sensorValue11); // Debugging
-//  Serial.println(sensorValue2); // Debugging
 }
 
 //send MIDI message
@@ -919,3 +921,5 @@ I went over some limitations, but here are some of them listed:
 - Not enough digital inputs on the microcontroller.
 - Ran out of resistors of the same ohm resistance. 
 
+## Next steps
+Check out some of my other ideas on my WIP page!

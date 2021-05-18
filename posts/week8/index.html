@@ -169,6 +169,19 @@ One major issue I kept having was accidently getting my two boards mixed up.">
 	</figure></p>
 <p>The next step is to set up the button circuit on the huzzah. We want to first connect one leg of the button to a 10k resistor leading to ground. Then, we want to read to digital pin 5 from that same leg. On the other leg of the button, send 3 volts. This circuit is adapted from the basic button circuit for the metro express board in my <a class="link" href="https://juhye-m.github.io/ps70/posts/week4/"  target="_blank" rel="noopener"
     >Week 4 documentation</a>.</p>
+<p>This is what the circuit looks like:
+<figure style="flex-grow: 133; flex-basis: 320px">
+		<a href="/ps70/posts/week8/circ.jpg" data-size="4032x3024"><img src="/ps70/posts/week8/circ.jpg"
+				srcset="/ps70/posts/week8/circ_hucf7047b26a2e4c9b2b1c4e77ec532546_2286324_480x0_resize_q75_box.jpg 480w, /ps70/posts/week8/circ_hucf7047b26a2e4c9b2b1c4e77ec532546_2286324_1024x0_resize_q75_box.jpg 1024w"
+				width="4032"
+				height="3024"
+				loading="lazy"
+				alt="Button circuit">
+		</a>
+		
+		<figcaption>Button circuit</figcaption>
+		
+	</figure></p>
 <p>The difficult part of this step was to make sure we were reading from the correct digital pin. I needed to take the huzzah board off of the breadboard and look on its underside to make sure I was connecting to the SCK/5 pin. I would encourage you to double check, as this was a silly mistake that had stumped me for too long.</p>
 <p>Here is the code:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">

@@ -1067,6 +1067,21 @@ CapacitiveSensor Sensor13 <span style="color:#f92672">=</span> CapacitiveSensor(
 </code></pre></div><p>I also made an array for all of the different tones of the chromatic scale, as well as differenet midi channels. Throughout all of this, I kept having to re-calibrate my keys!</p>
 <h2 id="part-6-adding-the-octave-shift">Part 6: Adding the octave-shift</h2>
 <p>My last touch was to add a push button to control the octave shift! I used a separate breadboard for this, as it was small and the original one was too crowded. I created a simple push button circuit with a 10k ohm resistor, and fed it into analog A1 pin (that I used as a digital pin!). The code for this was seemigly simple, as I would create an if statement that shifts up the played tone by +12 (one octave above in midi data). However, it was difficult to get this to work properly, as the ordering within the for loops and the checks were not always where it needed to be.</p>
+<p>This is what the circuit looks like:
+<figure style="flex-grow: 133; flex-basis: 320px">
+		<a href="/ps70/posts/finalproject/but.jpg" data-size="2016x1512"><img src="/ps70/posts/finalproject/but.jpg"
+				srcset="/ps70/posts/finalproject/but_hu1c12c8ee0055c74920df857ca6489c15_1003844_480x0_resize_q75_box.jpg 480w, /ps70/posts/finalproject/but_hu1c12c8ee0055c74920df857ca6489c15_1003844_1024x0_resize_q75_box.jpg 1024w"
+				width="2016"
+				height="1512"
+				loading="lazy"
+				alt="Button circuit">
+		</a>
+		
+		<figcaption>Button circuit</figcaption>
+		
+	</figure></p>
+<p>To read more about the circuitry, check out my <a class="link" href="https://juhye-m.github.io/ps70/posts/week4/"  target="_blank" rel="noopener"
+    >Week 4 documentation</a> where I build a music player button.</p>
 <p>Here is how it works:</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -1179,8 +1194,20 @@ CapacitiveSensor Sensor13 <span style="color:#f92672">=</span> CapacitiveSensor(
   Serial.write(data1);
   Serial.write(data2);
 }
-</code></pre></div><h2 id="okay-final-touches-for-real">Okay, final touches for real.</h2>
-<p>I drew! Made it cute! See the final video. :)</p>
+</code></pre></div><h2 id="visuals">Visuals</h2>
+<p>To make the product visually appealing, I also added a logo called &ldquo;Mini MIDI&rdquo; and decorative drawings.
+<figure style="flex-grow: 194; flex-basis: 465px">
+		<a href="/ps70/posts/finalproject/logo.jpg" data-size="2016x1039"><img src="/ps70/posts/finalproject/logo.jpg"
+				srcset="/ps70/posts/finalproject/logo_huc44482ed719ab0b4735e6996c890a69c_848262_480x0_resize_q75_box.jpg 480w, /ps70/posts/finalproject/logo_huc44482ed719ab0b4735e6996c890a69c_848262_1024x0_resize_q75_box.jpg 1024w"
+				width="2016"
+				height="1039"
+				loading="lazy"
+				alt="Logo">
+		</a>
+		
+		<figcaption>Logo</figcaption>
+		
+	</figure></p>
 <h2 id="limitations">Limitations</h2>
 <p>I went over some limitations, but here are some of them listed:</p>
 <ul>
@@ -1188,7 +1215,8 @@ CapacitiveSensor Sensor13 <span style="color:#f92672">=</span> CapacitiveSensor(
 <li>Ran out of resistors of the same ohm resistance.</li>
 </ul>
 <h2 id="next-steps">Next steps</h2>
-<p>Check out some of my other ideas on my WIP page!</p>
+<p>Check out some of my other ideas on my <a class="link" href="https://juhye-m.github.io/ps70/posts/wip-final-proj/"  target="_blank" rel="noopener"
+    >WIP page</a>!</p>
 
 </section>
 

@@ -23,6 +23,7 @@ This is a work in progress.
 
 ![Progress](progress.png)
 
+Here is the [STL file to download](watchband.stl).
 
 ## 3D Keyboard
 

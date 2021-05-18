@@ -156,7 +156,84 @@ How It Works The Adafruit LIS3DH triple-Axis Accelerometer Breakout has three ax
 	</figure></p>
 <h4 id="code">Code</h4>
 <p>I got the initial code from the Adafruit acceleration example! I had to download a few libraries in order to get there.</p>
-<h4 id="calibrating">Calibrating</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">
+<span style="color:#75715e">// Basic demo for accelerometer readings from Adafruit LIS3DH
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Wire.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;SPI.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Adafruit_LIS3DH.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Adafruit_Sensor.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// Used for software SPI
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define LIS3DH_CLK 13
+</span><span style="color:#75715e">#define LIS3DH_MISO 12
+</span><span style="color:#75715e">#define LIS3DH_MOSI 11
+</span><span style="color:#75715e"></span><span style="color:#75715e">// Used for hardware &amp; software SPI
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define LIS3DH_CS 10
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// software SPI
+</span><span style="color:#75715e"></span>Adafruit_LIS3DH lis <span style="color:#f92672">=</span> Adafruit_LIS3DH(LIS3DH_CS, LIS3DH_MOSI, LIS3DH_MISO, LIS3DH_CLK);
+<span style="color:#75715e">// hardware SPI
+</span><span style="color:#75715e">//Adafruit_LIS3DH lis = Adafruit_LIS3DH(LIS3DH_CS);
+</span><span style="color:#75715e">// I2C
+</span><span style="color:#75715e">//Adafruit_LIS3DH lis = Adafruit_LIS3DH();
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>(<span style="color:#66d9ef">void</span>) {
+  Serial.begin(<span style="color:#ae81ff">115200</span>);
+  <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>Serial) delay(<span style="color:#ae81ff">10</span>);     <span style="color:#75715e">// will pause Zero, Leonardo, etc until serial console opens
+</span><span style="color:#75715e"></span>
+  Serial.println(<span style="color:#e6db74">&#34;LIS3DH test!&#34;</span>);
+
+  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span> lis.begin(<span style="color:#ae81ff">0x18</span>)) {   <span style="color:#75715e">// change this to 0x19 for alternative i2c address
+</span><span style="color:#75715e"></span>    Serial.println(<span style="color:#e6db74">&#34;Couldnt start&#34;</span>);
+    <span style="color:#66d9ef">while</span> (<span style="color:#ae81ff">1</span>) yield();
+  }
+  Serial.println(<span style="color:#e6db74">&#34;LIS3DH found!&#34;</span>);
+
+  <span style="color:#75715e">// lis.setRange(LIS3DH_RANGE_4_G);   // 2, 4, 8 or 16 G!
+</span><span style="color:#75715e"></span>
+  Serial.print(<span style="color:#e6db74">&#34;Range = &#34;</span>); Serial.print(<span style="color:#ae81ff">2</span> <span style="color:#f92672">&lt;&lt;</span> lis.getRange());
+  Serial.println(<span style="color:#e6db74">&#34;G&#34;</span>);
+
+  <span style="color:#75715e">// lis.setDataRate(LIS3DH_DATARATE_50_HZ);
+</span><span style="color:#75715e"></span>  Serial.print(<span style="color:#e6db74">&#34;Data rate set to: &#34;</span>);
+  <span style="color:#66d9ef">switch</span> (lis.getDataRate()) {
+    <span style="color:#66d9ef">case</span> LIS3DH_DATARATE_1_HZ: Serial.println(<span style="color:#e6db74">&#34;1 Hz&#34;</span>); <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> LIS3DH_DATARATE_10_HZ: Serial.println(<span style="color:#e6db74">&#34;10 Hz&#34;</span>); <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> LIS3DH_DATARATE_25_HZ: Serial.println(<span style="color:#e6db74">&#34;25 Hz&#34;</span>); <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> LIS3DH_DATARATE_50_HZ: Serial.println(<span style="color:#e6db74">&#34;50 Hz&#34;</span>); <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> LIS3DH_DATARATE_100_HZ: Serial.println(<span style="color:#e6db74">&#34;100 Hz&#34;</span>); <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> LIS3DH_DATARATE_200_HZ: Serial.println(<span style="color:#e6db74">&#34;200 Hz&#34;</span>); <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> LIS3DH_DATARATE_400_HZ: Serial.println(<span style="color:#e6db74">&#34;400 Hz&#34;</span>); <span style="color:#66d9ef">break</span>;
+
+    <span style="color:#66d9ef">case</span> LIS3DH_DATARATE_POWERDOWN: Serial.println(<span style="color:#e6db74">&#34;Powered Down&#34;</span>); <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> LIS3DH_DATARATE_LOWPOWER_5KHZ: Serial.println(<span style="color:#e6db74">&#34;5 Khz Low Power&#34;</span>); <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> LIS3DH_DATARATE_LOWPOWER_1K6HZ: Serial.println(<span style="color:#e6db74">&#34;16 Khz Low Power&#34;</span>); <span style="color:#66d9ef">break</span>;
+  }
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+  lis.read();      <span style="color:#75715e">// get X Y and Z data at once
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// Then print out the raw data
+</span><span style="color:#75715e"></span>  Serial.print(<span style="color:#e6db74">&#34;X:  &#34;</span>); Serial.print(lis.x);
+  Serial.print(<span style="color:#e6db74">&#34;  </span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">Y:  &#34;</span>); Serial.print(lis.y);
+  Serial.print(<span style="color:#e6db74">&#34;  </span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">Z:  &#34;</span>); Serial.print(lis.z);
+
+  <span style="color:#75715e">/* Or....get a new sensor event, normalized */</span>
+  sensors_event_t event;
+  lis.getEvent(<span style="color:#f92672">&amp;</span>event);
+
+  <span style="color:#75715e">/* Display the results (acceleration is measured in m/s^2) */</span>
+  Serial.print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t\t</span><span style="color:#e6db74">X: &#34;</span>); Serial.print(event.acceleration.x);
+  Serial.print(<span style="color:#e6db74">&#34; </span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">Y: &#34;</span>); Serial.print(event.acceleration.y);
+  Serial.print(<span style="color:#e6db74">&#34; </span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">Z: &#34;</span>); Serial.print(event.acceleration.z);
+  Serial.println(<span style="color:#e6db74">&#34; m/s^2 &#34;</span>);
+
+  Serial.println();
+
+  delay(<span style="color:#ae81ff">200</span>);
+}
+</code></pre></div><h4 id="calibrating">Calibrating</h4>
 <p>I wasn&rsquo;t actually sure how to calibrate this accelerometer. I played around with the accelerometer to move it back and forth and different speeds. As I move it back and forth, I suspected that the faster I move it, the more acceleration there would be, especially during my &ldquo;turning points&rdquo; when I switch from moving it one direction to another.</p>
 <!-- raw HTML omitted -->
 

@@ -21,5 +21,5 @@ The microcontroller would hold the program that would play the buzzer while the 
 I first created a casing for the microcontroller so that it would be protected. I then filleted this casing and attached it to the watch.
 This is a work in progress.
 
-
 ![Progress](progress.png)
+

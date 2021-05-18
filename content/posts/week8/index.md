@@ -25,6 +25,9 @@ I attached a button to the huzzah and an LED to the ESP32 cam. Everytime the but
 
 The next step is to set up the button circuit on the huzzah. We want to first connect one leg of the button to a 10k resistor leading to ground. Then, we want to read to digital pin 5 from that same leg. On the other leg of the button, send 3 volts. This circuit is adapted from the basic button circuit for the metro express board in my [Week 4 documentation](https://juhye-m.github.io/ps70/posts/week4/). 
 
+This is what the circuit looks like:
+![Button circuit](circ.jpg)
+
 The difficult part of this step was to make sure we were reading from the correct digital pin. I needed to take the huzzah board off of the breadboard and look on its underside to make sure I was connecting to the SCK/5 pin. I would encourage you to double check, as this was a silly mistake that had stumped me for too long.
 
 Here is the code: 

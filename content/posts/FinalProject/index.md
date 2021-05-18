@@ -807,6 +807,11 @@ I also made an array for all of the different tones of the chromatic scale, as w
 
 My last touch was to add a push button to control the octave shift! I used a separate breadboard for this, as it was small and the original one was too crowded. I created a simple push button circuit with a 10k ohm resistor, and fed it into analog A1 pin (that I used as a digital pin!). The code for this was seemigly simple, as I would create an if statement that shifts up the played tone by +12 (one octave above in midi data). However, it was difficult to get this to work properly, as the ordering within the for loops and the checks were not always where it needed to be. 
 
+This is what the circuit looks like:
+![Button circuit](but.jpg)
+
+To read more about the circuitry, check out my [Week 4 documentation](https://juhye-m.github.io/ps70/posts/week4/) where I build a music player button. 
+
 Here is how it works:
 
 {{< youtube id="WLbQIn0KQCQ" title="Push Button" >}}
@@ -922,9 +927,10 @@ void MIDImessage(byte command, byte data1, byte data2) {
 }
 ```
 
-## Okay, final touches for real.
+## Visuals
 
-I drew! Made it cute! See the final video. :)
+To make the product visually appealing, I also added a logo called "Mini MIDI" and decorative drawings. 
+![Logo](logo.jpg)
 
 ## Limitations
 I went over some limitations, but here are some of them listed:
@@ -932,4 +938,4 @@ I went over some limitations, but here are some of them listed:
 - Ran out of resistors of the same ohm resistance. 
 
 ## Next steps
-Check out some of my other ideas on my WIP page!
+Check out some of my other ideas on my [WIP page](https://juhye-m.github.io/ps70/posts/wip-final-proj/)!

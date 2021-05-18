@@ -39,6 +39,18 @@ I liked how the bottom sat flat on the ground, and how the figure resembles a hu
     </item>
     
     <item>
+      <title>Week 8</title>
+      <link>https://juhye-m.github.io/ps70/posts/week8/</link>
+      <pubDate>Sat, 27 Mar 2021 21:48:03 -0800</pubDate>
+      
+      <guid>https://juhye-m.github.io/ps70/posts/week8/</guid>
+      <description>Week 8: Radio communication This week&amp;rsquo;s asssignment was to demonstrate communication between two microcontrollers, and I chose to do this over radio communication.
+Morse Code Light For this project, I demonstrated radio serial communication between my Huzzah Board and my ESP32 Cam.
+First, I set up a simple radio communication program in order to establish the connection between the two devices and make sure that it works.
+One major issue I kept having was accidently getting my two boards mixed up.</description>
+    </item>
+    
+    <item>
       <title>Week 9</title>
       <link>https://juhye-m.github.io/ps70/posts/week-9/</link>
       <pubDate>Sat, 27 Mar 2021 21:48:03 -0800</pubDate>

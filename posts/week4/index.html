@@ -169,10 +169,99 @@ I first used the button circuit from class as inspiration. I attached a button a
 		<figcaption>Circuit</figcaption>
 		
 	</figure></p>
+<!-- raw HTML omitted -->
 <h4 id="code">Code</h4>
 <p>I got the initial code for the music from this <a class="link" href="https://learn.adafruit.com/experimenters-guide-for-metro/circ06-code"  target="_blank" rel="noopener"
     >Adafruit Guide!</a></p>
-<h4 id="and-tada">And&hellip; TADA!</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">// CIRC06 - Music with Piezo
+</span><span style="color:#75715e"></span>  
+<span style="color:#66d9ef">int</span> speakerPin <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;
+<span style="color:#66d9ef">int</span> length <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>; <span style="color:#75715e">// the number of notes
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> notes[] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ccggaagffeeddc &#34;</span>; <span style="color:#75715e">// a space represents a rest
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> beats[] <span style="color:#f92672">=</span> { <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span> };
+<span style="color:#66d9ef">int</span> tempo <span style="color:#f92672">=</span> <span style="color:#ae81ff">300</span>;
+ 
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">playNote</span>(<span style="color:#66d9ef">char</span> note, <span style="color:#66d9ef">int</span> duration) {
+  <span style="color:#66d9ef">char</span> names[] <span style="color:#f92672">=</span> { <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;f&#39;</span>, <span style="color:#e6db74">&#39;g&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span> };
+  <span style="color:#66d9ef">int</span> tones[] <span style="color:#f92672">=</span> { <span style="color:#ae81ff">1915</span>, <span style="color:#ae81ff">1700</span>, <span style="color:#ae81ff">1519</span>, <span style="color:#ae81ff">1432</span>, <span style="color:#ae81ff">1275</span>, <span style="color:#ae81ff">1136</span>, <span style="color:#ae81ff">1014</span>, <span style="color:#ae81ff">956</span> };  
+  <span style="color:#75715e">// play the tone corresponding to the note name
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">8</span>; i<span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">if</span> (names[i] <span style="color:#f92672">==</span> note) {
+      tone(speakerPin, tones[i], duration);
+    }
+  }
+}
+ 
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+  pinMode(speakerPin, OUTPUT);
+}
+ 
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> length; i<span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">if</span> (notes[i] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39; &#39;</span>) {
+      delay(beats[i] <span style="color:#f92672">*</span> tempo); <span style="color:#75715e">// rest
+</span><span style="color:#75715e"></span>    } <span style="color:#66d9ef">else</span> {
+      playNote(notes[i], beats[i] <span style="color:#f92672">*</span> tempo);
+    }
+    
+    <span style="color:#75715e">// pause between notes
+</span><span style="color:#75715e"></span>    delay(tempo <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>); 
+  }
+}
+</code></pre></div><p>Using this as the starting point for my program, I adapted the code to play a different tune.
+I did this by changing the array of characters, notes, which is a string, from &ldquo;ccggaagffeeddc &quot; to &ldquo;ccggaag ffeeddcc&rdquo;. Because the tones are already associated with the note names in the play note function, this is sufficient to change the notes that are played. The tones in the play note function are frequencies.</p>
+<p>You can learn more about the tone function in the <a class="link" href="https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/"  target="_blank" rel="noopener"
+    >arduino manual</a>. The tone function takes as input a frequency, and outputs a square wave of that frequency. In the code above, we see that the tone() function takes in 3 arguments, with the latter being optional: pin, frequency, duration.</p>
+<p>I modified the &ldquo;play note&rdquo; function as well, in order to shift down the tones by an octave. To get the proper frequencies for the notes, I referenced this <a class="link" href="https://pages.mtu.edu/~suits/notefreqs.html"  target="_blank" rel="noopener"
+    >chart of frequencies</a>.</p>
+<p><figure style="flex-grow: 48; flex-basis: 116px">
+		<a href="/ps70/posts/week4/chart.png" data-size="368x756"><img src="/ps70/posts/week4/chart.png"
+				srcset="/ps70/posts/week4/chart_huf204a0cb1966211cdab5f6ffd97488ca_72100_480x0_resize_box_2.png 480w, /ps70/posts/week4/chart_huf204a0cb1966211cdab5f6ffd97488ca_72100_1024x0_resize_box_2.png 1024w"
+				width="368"
+				height="756"
+				loading="lazy"
+				alt="Tone frequencies">
+		</a>
+		
+		<figcaption>Tone frequencies</figcaption>
+		
+	</figure></p>
+<p>Then, I rounded the frequencies to the nearest integer, because the tone function only takes as input an unsigned integer.</p>
+<p>Here is the modified code that I wrote:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> speakerPin <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;
+<span style="color:#66d9ef">int</span> length <span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>; <span style="color:#75715e">// the number of notes
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> notes[] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ccggaag ffeeddcc&#34;</span>; <span style="color:#75715e">// a space represents a rest
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> beats[] <span style="color:#f92672">=</span> { <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span> };
+<span style="color:#66d9ef">int</span> tempo <span style="color:#f92672">=</span> <span style="color:#ae81ff">300</span>;
+ 
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">playNote</span>(<span style="color:#66d9ef">char</span> note, <span style="color:#66d9ef">int</span> duration) {
+  <span style="color:#66d9ef">char</span> names[] <span style="color:#f92672">=</span> { <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;f&#39;</span>, <span style="color:#e6db74">&#39;g&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span> };
+  <span style="color:#66d9ef">int</span> tones[] <span style="color:#f92672">=</span> { <span style="color:#ae81ff">523</span>, <span style="color:#ae81ff">587</span>, <span style="color:#ae81ff">659</span>, <span style="color:#ae81ff">698</span>, <span style="color:#ae81ff">784</span>, <span style="color:#ae81ff">880</span>, <span style="color:#ae81ff">988</span>, <span style="color:#ae81ff">1047</span> };  
+  <span style="color:#75715e">// play the tone corresponding to the note name
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">8</span>; i<span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">if</span> (names[i] <span style="color:#f92672">==</span> note) {
+      tone(speakerPin, tones[i], duration);
+    }
+  }
+}
+ 
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+  pinMode(speakerPin, OUTPUT);
+}
+ 
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> length; i<span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">if</span> (notes[i] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39; &#39;</span>) {
+      delay(beats[i] <span style="color:#f92672">*</span> tempo); <span style="color:#75715e">// rest
+</span><span style="color:#75715e"></span>    } <span style="color:#66d9ef">else</span> {
+      playNote(notes[i], beats[i] <span style="color:#f92672">*</span> tempo);
+    }
+    
+    <span style="color:#75715e">// pause between notes
+</span><span style="color:#75715e"></span>    delay(tempo <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>); 
+  }
+}
+</code></pre></div><h4 id="and-tada">And&hellip; TADA!</h4>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe loading="lazy" src="https://www.youtube.com/embed/B8eITQbo8LA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>

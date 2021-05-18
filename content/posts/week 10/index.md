@@ -272,3 +272,9 @@ void loop()
 
 I also did research on what I could use a stepper motor to try to integrate it into some final project ideas.
 I found a project that used [stepper motors and midi as well](https://create.arduino.cc/projecthub/JonJonKayne/arduino-midi-stepper-synth-d291ae). However, it seemed to use midi as INPUT instead of OUTPUT like I've been working on, and it used midi pins, so I decided to table this for now.
+
+#### Update
+Motor works! The issue was that one of my voltage wires was accidently connected to ground instead.
+
+Here it is in action!
+![Motor](motor.GIF)

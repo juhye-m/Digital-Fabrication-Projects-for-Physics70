@@ -669,7 +669,7 @@ I went forward with this code, knowing it could be much better. I needed to stil
 When it comes to a product, the visual and aesthetic of it can really make or break people's first impression of it! For my final project, I wanted to case my midi controller in a mini piano-keyboard. I wanted my MIDI keyboard to look very compact and small. I edited files of a synth keyboard from [Thingyverse](https://www.thingiverse.com/thing:2760653).
 I got rid of the huge letters on the top face, the labels, and smoothed down the back face. I also created a small window on the top face, in case I wanted to fit anything out of the face.
 
-Here are the [STL files](). 
+Here are the [STL files](pianostls.zip). 
 
 ![Assembled 3D model](midi.jpg)
 ![Side view](midiside.jpg)

@@ -25,8 +25,33 @@ Then, I taped the entire project onto a piece of scrap cardboard, with the bread
 ![Structure](structure.jpg)
 ![Side view](sside.jpg)
 
+The code that I used for this project is similar to the one from class:
+```cpp
 
- 
+const int A1A = 3;  // define pin 3 for A-1A (PWM Speed)
+const int A1B = 4;  // define pin 4 for A-1B (direction)
+
+void setup() {
+  pinMode(A1A, OUTPUT);     // specify these pins as outputs
+  pinMode(A1B, OUTPUT);
+  digitalWrite(A1A, LOW);   // start with the motors off 
+  digitalWrite(A1B, LOW);
+}
+
+void loop() {
+  // start the motor 
+  digitalWrite(A1A, HIGH);   
+  digitalWrite(A1B, LOW);
+  delay(4000);              // allow the motor to run for 4 seconds
+
+  // stop the motor
+  digitalWrite(A1A, LOW);   // setting both pins LOW stops the motor 
+  digitalWrite(A1B, LOW);   // redundant, but doesn't hurt 
+  delay(2000);              // keep the motor off for 2 seconds
+
+}
+``` 
+
 #### Testing the base and kinetic component!
 Originally, I intended to make a moving board, like a robot that just goes straight. However, after testing the board, it just kept running in circles! I then assumed that part of the issue was that the board was imbalanced.
 

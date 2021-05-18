@@ -55,8 +55,8 @@ void loop() {
 
 After fixing this, the program above worked! I can check my looking at the serial monitor and checking for the outputs 0 when not pressed and 1 when pressed.
 
+(Click to play gif)
 ![Button input](butto.GIF)
-
 
 
 Next, we run a simple blink program on our ESP32 cam in order to test the circuit and make sure the basic program works.
@@ -78,6 +78,7 @@ void loop() {
 ```
 
 And here is the LED light on the ESP32 Cam blinking!
+(Click to play gif)
 ![Blink output](blink.GIF)
 
 
